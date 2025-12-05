@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precision Torque - Vehicle Registration</title>
+<meta name="description" content="Vehicle registration and titling services handled remotely by Precision Torque — avoid DMV lines and paperwork headaches.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237a1f2f;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%235e1722;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='98' fill='url(%23grad)' /%3E%3Cg transform='translate(100,70)'%3E%3Ccircle cx='0' cy='0' r='22' fill='none' stroke='%23fff' stroke-width='3' /%3E%3Cpath d='M -8,-8 L 8,8 M 8,-8 L -8,8' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' /%3E%3Crect x='-6' y='18' width='12' height='24' fill='%23fff' rx='2' /%3E%3C/g%3E%3Ctext x='100' y='145' font-size='28' font-weight='700' text-anchor='middle' fill='%23fff' font-family='Arial,sans-serif'%3EPRECISION TORQUE%3C/text%3E%3Ctext x='100' y='162' font-size='11' text-anchor='middle' fill='%23ddd' font-family='Arial,sans-serif'%3EProfessional Services%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+/* Page Styles (kept self-contained) */
+body { font-family: 'Montserrat', sans-serif; margin:0; padding:0; background:#f7f5f5; color:#333; }
+a { text-decoration:none; color:#6b7280; }
+.content-link { color:#7a1f2f; font-weight:600; text-decoration:underline; }
+/* Accessibility: skip link */
+.skip-link { position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+.skip-link:focus { left:10px; top:10px; width:auto; height:auto; padding:8px 12px; background:#fff; color:#5e1722; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.2); text-decoration:none; }
+header { background:#222; color:#fff; display:flex; justify-content:space-between; align-items:center; padding:15px 30px; position:sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+.logo h2 { margin:0; font-size:24px; font-weight:700; }
+nav { display:flex; gap:30px; }
+nav a { color:#fff; font-weight:600; transition:color 0.3s; text-decoration:none; }
+nav a:hover { color:#7a1f2f; }
+.cta { background:#7a1f2f; color:#fff; padding:12px 24px; border-radius:5px; font-weight:600; transition:all 0.3s; display:inline-block; }
+.cta:hover { background:#5e1722; transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.12); }
+.container { max-width:1200px; margin:0 auto; padding:50px 20px; }
+h1 { font-size:36px; margin-bottom:20px; font-weight:700; }
+h2 { font-size:28px; font-weight:700; }
+h3 { font-size:20px; margin-bottom:15px; font-weight:600; }
+.section { margin-bottom:60px; }
+.service-card { background:#fff; padding:20px; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); margin-bottom:20px; }
+.flex { display:flex; flex-wrap:wrap; gap:20px; }
+footer { background:#222; color:#fff; padding:40px 20px; margin-top:60px; }
+.footer-content { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; text-align:left; }
+.footer-section h4 { margin:0 0 15px 0; font-weight:600; font-size:16px; }
+.footer-section p { margin:8px 0; font-size:14px; }
+.footer-bottom { text-align:center; margin-top:30px; padding-top:20px; border-top:1px solid #444; font-size:14px; }
+@media (max-width:768px){ nav { flex-direction:column; gap:15px; } .flex { flex-direction:column; } .footer-content { flex-direction:column; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header>
+    <div class="logo"><h2>Precision Torque</h2><div class="tagline" style="font-size:13px;color:#7a1f2f;font-weight:600;margin-top:4px;">Trusted Local Bookkeeping &amp; Notary</div></div>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="bookkeeping.html">Bookkeeping</a>
+        <a href="notary.html">Mobile Notary</a>
+        <a href="vehicle.html">Vehicle Registration</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="cta">Book Now</a>
+</header>
+
+<main id="main-content" role="main">
+<section class="container section">
+    <h2>Vehicle Registration & Titling</h2>
+    <p>We handle all vehicle registration and titling paperwork remotely or at your preferred location. Save time and avoid DMV lines.</p>
+
+    <h3>How it Works</h3>
+    <ol>
+        <li>Send vehicle documents digitally</li>
+        <li>We handle submission to DMV or local authorities</li>
+        <li>Receive confirmation, titles, or tags</li>
+        <li>Pay securely online</li>
+    </ol>
+
+    <h3>Pricing</h3>
+    <ul>
+        <li>Standard Registration: $25 per vehicle</li>
+        <li>Titling Service: $40 per vehicle</li>
+        <li>Additional DMV filing: $10–$15</li>
+    </ul>
+
+    <a href="contact.html" class="cta">Submit Vehicle Paperwork</a>
+</section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Precision Torque</h4>
+            <p>Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Services</h4>
+            <p><a href="bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
+            <p><a href="notary.html" style="color:#ccc;">Mobile Notary</a></p>
+            <p><a href="vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <p><a href="index.html" style="color:#ccc;">Home</a></p>
+            <p><a href="contact.html" style="color:#ccc;">Contact Us</a></p>
+            <p><a href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1" style="color:#ccc;" target="_blank" rel="noopener">Upload Documents</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>👤 Destinee Montgomery</p>
+            <p>📱 <a href="tel:+16825297128" class="content-link">(682) 529-7128</a></p>
+            <p>✉️ <a href="mailto:support@destineemontgomery.com" class="content-link">support@destineemontgomery.com</a></p>
+            <p>📍 Joshua, TX & Surrounding Areas</p>
+            <p>🔒 Insured &amp; Bonded (E&amp;O insurance for notary services)</p>
+            <p><a href="contact.html" class="cta">Get in Touch</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 Precision Torque — All Rights Reserved | Licensed, Insured &amp; Bonded (E&amp;O for Notary Services) | (682) 529-7128 | support@destineemontgomery.com
+    </div>
+</footer>
+
+</body>
+</html>
