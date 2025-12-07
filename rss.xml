@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Precision Torque Blog</title>
+    <link>/blog/</link>
+    <description>Helpful tips for bookkeeping, notary, and vehicle registration.</description>
+    <language>en-us</language>
+    <item>
+      <title>What to Bring to Your Mobile Notary Appointment</title>
+      <link>/blog/what-to-bring-notary.html</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
+      <description>Checklist: what to bring to your mobile notary appointment.</description>
+    </item>
+    <item>
+      <title>5 Quick Bookkeeping Tips for Small Business Owners</title>
+      <link>/blog/bookkeeping-tips.html</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
+      <description>Practical bookkeeping tips to keep your books accurate.</description>
+    </item>
+    <item>
+      <title>Preparing for Vehicle Registration & Title Transfer</title>
+      <link>/blog/vehicle-registration-tips.html</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
+      <description>Checklist and tips for vehicle registration and title transfer.</description>
+    </item>
+    <item>
+      <title>Common Bookkeeping Mistakes (and how to fix them)</title>
+      <link>/blog/common-bookkeeping-mistakes.html</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
+      <description>Frequent bookkeeping errors and corrections.</description>
+    </item>
+    <item>
+      <title>How to Prepare for DMV Visits</title>
+      <link>/blog/dmv-prep.html</link>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 +0000</pubDate>
+      <description>Checklist for DMV visits to avoid extra trips.</description>
+    </item>
+  </channel>
+</rss>

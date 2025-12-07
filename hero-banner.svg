@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#7a1f2f"/>
+      <stop offset="1" stop-color="#6b7280"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" fill="#f7f5f5"/>
+  <rect x="0" y="0" width="1200" height="360" rx="12" fill="url(#g)" opacity="0.09"/>
+  <g transform="translate(80,60)" fill="#7a1f2f">
+    <rect x="0" y="0" width="220" height="220" rx="12" fill="#7a1f2f" opacity="0.12"/>
+    <circle cx="160" cy="60" r="42" fill="#7a1f2f" opacity="0.16"/>
+  </g>
+  <text x="320" y="140" font-family="Montserrat, Arial, sans-serif" font-size="44" fill="#222" font-weight="700">Precision Torque</text>
+  <text x="320" y="190" font-family="Montserrat, Arial, sans-serif" font-size="20" fill="#444">Local bookkeeping, mobile notary, and vehicle services that simplify your day.</text>
+</svg>
