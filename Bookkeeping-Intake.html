@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Bookkeeping Intake | Precision Torque</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Shared site styles + header/footer -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/includes.js" defer></script>
+
+  <!-- Page-specific styles only -->
+  <style>
+    body {
+      background:#f4f4f4;
+    }
+
+    .intake-container {
+      max-width:720px;
+      margin:40px auto;
+      background:#ffffff;
+      padding:32px;
+      border-radius:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .intake-container h1 {
+      text-align:center;
+      margin-bottom:6px;
+      color:var(--cta);
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      font-size:22px;
+    }
+
+    .intake-container h2 {
+      text-align:center;
+      margin:0 0 20px;
+      color:#1f2937;
+      font-size:18px;
+      font-weight:500;
+    }
+
+    .intake-container p.lead {
+      text-align:center;
+      margin-bottom:28px;
+      color:#4b5563;
+      font-size:15px;
+    }
+
+    label {
+      display:block;
+      margin-top:16px;
+      font-weight:600;
+      color:#111827;
+      font-size:14px;
+    }
+
+    input, textarea, select {
+      width:100%;
+      padding:11px;
+      margin-top:6px;
+      border:1px solid #d1d5db;
+      border-radius:8px;
+      font-size:15px;
+      box-sizing:border-box;
+    }
+
+    textarea {
+      min-height:110px;
+      resize:vertical;
+    }
+
+    .checkbox-group label {
+      font-weight:400;
+      margin-top:8px;
+      font-size:14px;
+    }
+
+    .submit-btn {
+      width:100%;
+      margin-top:30px;
+      background:var(--cta);
+      color:#fff;
+      padding:14px;
+      border:none;
+      border-radius:999px;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+      transition:background 0.3s ease;
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+    }
+
+    .submit-btn:hover {
+      background:var(--ctaHover);
+    }
+
+    .secure-note {
+      text-align:center;
+      font-size:13px;
+      margin-top:14px;
+      color:#6b7280;
+    }
+
+    .section-label {
+      margin-top:28px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      color:var(--cta);
+      font-weight:700;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Shared Header -->
+  <div id="site-header"></div>
+
+  <main class="container">
+
+    <div class="intake-container">
+
+      <h1>Precision Torque</h1>
+      <h2>Secure Bookkeeping Intake</h2>
+      <p class="lead">
+        Please complete this form to begin bookkeeping services.
+        This allows us to provide an accurate quote and start efficiently.
+      </p>
+
+      <form action="https://formsubmit.co/ed912b0d3f3cf60ed97bb00e481f13ef" method="POST">
+
+        <!-- FormSubmit helpers -->
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Bookkeeping Intake - Precision Torque">
+        <input type="hidden" name="_next" value="https://destineemontgomery.com">
+
+        <div class="section-label">Client Information</div>
+
+        <label>Full Name *</label>
+        <input type="text" name="Full Name" required>
+
+        <label>Email Address *</label>
+        <input type="email" name="Email" required>
+
+        <label>Phone Number *</label>
+        <input type="text" name="Phone" required>
+
+        <label>Business Name (if applicable)</label>
+        <input type="text" name="Business Name">
+
+        <label>Business Type / Industry</label>
+        <input type="text" name="Business Type / Industry">
+
+        <div class="section-label">Services Requested</div>
+
+        <label>Which services are you requesting? *</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="Services Requested" value="Monthly Bookkeeping"> Monthly Bookkeeping</label>
+          <label><input type="checkbox" name="Services Requested" value="Catch-Up / Cleanup"> Catch-Up / Cleanup</label>
+          <label><input type="checkbox" name="Services Requested" value="QuickBooks Setup"> QuickBooks Setup</label>
+        </div>
+
+        <div class="section-label">Bookkeeping Status</div>
+
+        <label>How many months are your books currently behind?</label>
+        <input type="text" name="Months Behind">
+
+        <label>Approximate number of transactions per month?</label>
+        <input type="text" name="Monthly Transactions">
+
+        <label>Accounting software used (QuickBooks, Excel, None, etc.)</label>
+        <input type="text" name="Software Used">
+
+        <label>Do you currently have a bookkeeper?</label>
+        <select name="Current Bookkeeper">
+          <option value="">Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+
+        <div class="section-label">Timeline & Contact</div>
+
+        <label>When would you like to begin services?</label>
+        <input type="text" name="Desired Start">
+
+        <label>Best time and method to contact you</label>
+        <input type="text" name="Contact Preference">
+
+        <div class="section-label">Additional Details</div>
+
+        <label>Anything else you'd like us to know?</label>
+        <textarea name="Additional Notes"></textarea>
+
+        <label style="margin-top:20px;">
+          <input type="checkbox" required>
+          I consent to be contacted regarding bookkeeping services and understand that work begins after payment is submitted.
+        </label>
+
+        <button type="submit" class="submit-btn">Submit Secure Intake</button>
+
+        <p class="secure-note">🔒 Your in
