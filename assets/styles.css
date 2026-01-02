@@ -1,6 +1,112 @@
 /* Precision Torque — shared site stylesheet (RED THEME) */
 
 :root{
+  /* DARK CANVAS (fixes "too light") */
+  --bg:#0f0f10;            /* page background */
+  --surface:#ffffff;       /* content surface */
+  --surface-muted:#f7f5f5; /* subtle section background */
+
+  /* RED BRAND */
+  --accent:#7a1f2f;
+  --accent-dark:#5e1722;
+
+  --muted:#9ca3af;
+  --dark:#222;
+}
+
+/* Base */
+html,body{height:100%}
+body{
+  font-family:'Montserrat', Arial, sans-serif;
+  margin:0;
+  padding:0;
+  background:
+    radial-gradient(900px 360px at 20% 0%, rgba(122,31,47,.22), transparent 60%),
+    radial-gradient(900px 360px at 80% 10%, rgba(94,23,34,.18), transparent 60%),
+    var(--bg);
+  color:#e5e7eb;
+  line-height:1.6;
+}
+
+a{color:var(--muted);text-decoration:none}
+a:hover{color:#fff}
+
+/* Header / nav (keep your current look) */
+header{
+  background:var(--dark);
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 8px rgba(0,0,0,0.25)
+}
+.logo h2{margin:0;font-size:20px;font-weight:700}
+.tagline{font-size:13px;color:var(--accent);font-weight:600;margin-top:4px}
+nav{display:flex;gap:20px;align-items:center}
+nav a{color:#fff;font-weight:600}
+nav a:hover{color:var(--accent)}
+
+/* Buttons */
+.cta{
+  background:var(--accent);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:700;
+  display:inline-block
+}
+.cta:hover{background:var(--accent-dark)}
+
+/* Layout: make pages feel "finished" */
+.container{
+  max-width:1100px;
+  margin:26px auto;
+  padding:28px 24px;
+  background:var(--surface);
+  color:#111827;
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,0.28);
+  border:1px solid rgba(0,0,0,0.06);
+}
+.section{margin-bottom:46px}
+
+/* Cards */
+.card{
+  background:#fff;
+  padding:22px;
+  border-radius:14px;
+  box-shadow:0 10px 22px rgba(0,0,0,0.08);
+  border:1px solid rgba(0,0,0,0.06);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+
+/* Footer */
+footer{background:var(--dark);color:#fff;padding:40px 20px;margin-top:40px}
+.footer-content{
+  max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:30px;text-align:left
+}
+.footer-section h4{margin:0 0 15px 0;font-weight:600;font-size:16px}
+.footer-section p{margin:8px 0;font-size:14px}
+.footer-bottom{
+  text-align:center;margin-top:30px;padding-top:20px;
+  border-top:1px solid rgba(255,255,255,0.06);font-size:14px
+}
+
+@media (max-width:768px){
+  header nav{flex-direction:column;gap:12px}
+  .container{margin:16px 12px;padding:22px 16px}
+}
+
+:root{
   --bg:#f7f5f5;
 
   /* RED BRAND */
