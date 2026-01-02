@@ -108,3 +108,33 @@ footer{background:var(--dark);color:#fff;padding:40px 20px;margin-top:40px}
   .post{display:block}
   .post img.post-thumb{width:100%;max-width:240px;margin-bottom:12px}
 }
+/* ===== Home hero shared helpers (optional but recommended) ===== */
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Make button row align left (your change) */
+.btn-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:flex-start; /* <- aligns buttons left */
+  margin-top:18px;
+}
+
+/* Ghost button (your change) */
+.btn-ghost{
+  border: 1px solid rgba(122,31,47,0.35);
+  color: var(--accent);
+  background: rgba(122,31,47,0.06);
+  padding:10px 14px;
+  border-radius:6px;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-block;
+}
+.btn-ghost:hover{
+  border-color: rgba(122,31,47,0.55);
+  background: rgba(122,31,47,0.10);
+}
+
+/* Slight polish: consistent heading spacing */
+h1, h2, h3 { line-height: 1.2; }
