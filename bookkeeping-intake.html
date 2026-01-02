@@ -5,134 +5,150 @@
   <title>Secure Bookkeeping Intake | Precision Torque</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Shared site styles + header/footer -->
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="/js/includes.js" defer></script>
+  <!-- Shared site styles (YOU HAVE /assets/styles.css) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
 
-  <!-- Page-specific styles only -->
   <style>
-    body {
-      background:#f4f4f4;
+    /* Page-only styles */
+    body { background:#f4f4f4; }
+
+    .intake-wrap { padding: 30px 0; }
+
+    .intake-container{
+      max-width: 760px;
+      margin: 0 auto;
+      background:#fff;
+      padding: 32px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    .intake-container {
-      max-width:720px;
-      margin:40px auto;
-      background:#ffffff;
-      padding:32px;
-      border-radius:14px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .intake-container h1 {
+    .intake-title{
       text-align:center;
-      margin-bottom:6px;
-      color:var(--cta);
-      letter-spacing:0.08em;
-      text-transform:uppercase;
-      font-size:22px;
+      margin: 0 0 6px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 22px;
+      font-weight: 800;
     }
 
-    .intake-container h2 {
+    .intake-subtitle{
       text-align:center;
-      margin:0 0 20px;
+      margin: 0 0 18px;
       color:#1f2937;
-      font-size:18px;
-      font-weight:500;
+      font-size: 18px;
+      font-weight: 600;
     }
 
-    .intake-container p.lead {
+    .lead{
       text-align:center;
-      margin-bottom:28px;
+      margin: 0 auto 26px;
       color:#4b5563;
-      font-size:15px;
+      font-size: 15px;
+      max-width: 620px;
+      line-height: 1.6;
     }
 
-    label {
+    label{
       display:block;
-      margin-top:16px;
-      font-weight:600;
+      margin-top: 16px;
+      font-weight: 700;
       color:#111827;
-      font-size:14px;
+      font-size: 14px;
     }
 
-    input, textarea, select {
+    input, textarea, select{
       width:100%;
-      padding:11px;
-      margin-top:6px;
-      border:1px solid #d1d5db;
-      border-radius:8px;
-      font-size:15px;
-      box-sizing:border-box;
+      padding: 11px;
+      margin-top: 6px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 15px;
+      box-sizing: border-box;
+      font-family: inherit;
     }
 
-    textarea {
-      min-height:110px;
-      resize:vertical;
+    textarea{ min-height: 110px; resize: vertical; }
+
+    .section-label{
+      margin-top: 26px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 800;
     }
 
-    .checkbox-group label {
-      font-weight:400;
-      margin-top:8px;
-      font-size:14px;
+    .checkbox-group label{
+      font-weight: 500;
+      margin-top: 10px;
+      font-size: 14px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
     }
+    .checkbox-group input{ width:auto; margin-top:2px; }
 
-    .submit-btn {
+    .submit-btn{
       width:100%;
-      margin-top:30px;
-      background:var(--cta);
+      margin-top: 26px;
+      background: var(--accent);
       color:#fff;
-      padding:14px;
-      border:none;
-      border-radius:999px;
-      font-size:16px;
-      font-weight:700;
-      cursor:pointer;
-      transition:background 0.3s ease;
-      text-transform:uppercase;
-      letter-spacing:0.06em;
+      padding: 14px;
+      border: none;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.25s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
+    .submit-btn:hover{ background: var(--accent-dark); }
 
-    .submit-btn:hover {
-      background:var(--ctaHover);
-    }
-
-    .secure-note {
+    .secure-note{
       text-align:center;
-      font-size:13px;
-      margin-top:14px;
+      font-size: 13px;
+      margin-top: 12px;
       color:#6b7280;
-    }
-
-    .section-label {
-      margin-top:28px;
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:0.12em;
-      color:var(--cta);
-      font-weight:700;
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- Shared Header -->
-  <div id="site-header"></div>
+  <!-- STANDARD HEADER (same as other pages) -->
+  <header>
+    <div class="logo">
+      <h2>Precision Torque</h2>
+      <div class="tagline">Trusted Local Bookkeeping &amp; Notary</div>
+    </div>
 
-  <main class="container">
+    <nav aria-label="Main navigation">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/bookkeeping.html">Bookkeeping</a>
+      <a href="/notary.html">Mobile Notary</a>
+      <a href="/vehicle.html">Vehicle Registration</a>
+      <a href="/blog/index.html">Blog</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
 
+    <a href="/contact.html" class="cta">Book Now</a>
+  </header>
+
+  <main id="main-content" class="container intake-wrap" role="main">
     <div class="intake-container">
-
-      <h1>Precision Torque</h1>
-      <h2>Secure Bookkeeping Intake</h2>
+      <h1 class="intake-title">Precision Torque</h1>
+      <h2 class="intake-subtitle">Secure Bookkeeping Intake</h2>
       <p class="lead">
-        Please complete this form to begin bookkeeping services.
-        This allows us to provide an accurate quote and start efficiently.
+        Please complete this form to begin bookkeeping services. This helps us provide an accurate quote and start efficiently.
       </p>
 
       <form action="https://formsubmit.co/ed912b0d3f3cf60ed97bb00e481f13ef" method="POST">
-
         <!-- FormSubmit helpers -->
         <input type="text" name="_honey" style="display:none">
         <input type="hidden" name="_captcha" value="false">
@@ -141,24 +157,24 @@
 
         <div class="section-label">Client Information</div>
 
-        <label>Full Name *</label>
-        <input type="text" name="Full Name" required>
+        <label for="full-name">Full Name *</label>
+        <input id="full-name" type="text" name="Full Name" required>
 
-        <label>Email Address *</label>
-        <input type="email" name="Email" required>
+        <label for="email">Email Address *</label>
+        <input id="email" type="email" name="Email" required>
 
-        <label>Phone Number *</label>
-        <input type="text" name="Phone" required>
+        <label for="phone">Phone Number *</label>
+        <input id="phone" type="text" name="Phone" required>
 
-        <label>Business Name (if applicable)</label>
-        <input type="text" name="Business Name">
+        <label for="biz-name">Business Name (if applicable)</label>
+        <input id="biz-name" type="text" name="Business Name">
 
-        <label>Business Type / Industry</label>
-        <input type="text" name="Business Type / Industry">
+        <label for="industry">Business Type / Industry</label>
+        <input id="industry" type="text" name="Business Type / Industry">
 
         <div class="section-label">Services Requested</div>
 
-        <label>Which services are you requesting? *</label>
+        <label>Which services are you requesting?</label>
         <div class="checkbox-group">
           <label><input type="checkbox" name="Services Requested" value="Monthly Bookkeeping"> Monthly Bookkeeping</label>
           <label><input type="checkbox" name="Services Requested" value="Catch-Up / Cleanup"> Catch-Up / Cleanup</label>
@@ -167,40 +183,85 @@
 
         <div class="section-label">Bookkeeping Status</div>
 
-        <label>How many months are your books currently behind?</label>
-        <input type="text" name="Months Behind">
+        <label for="months-behind">How many months are your books currently behind?</label>
+        <input id="months-behind" type="text" name="Months Behind">
 
-        <label>Approximate number of transactions per month?</label>
-        <input type="text" name="Monthly Transactions">
+        <label for="txns">Approximate number of transactions per month?</label>
+        <input id="txns" type="text" name="Monthly Transactions">
 
-        <label>Accounting software used (QuickBooks, Excel, None, etc.)</label>
-        <input type="text" name="Software Used">
+        <label for="software">Accounting software used (QuickBooks, Excel, None, etc.)</label>
+        <input id="software" type="text" name="Software Used">
 
-        <label>Do you currently have a bookkeeper?</label>
-        <select name="Current Bookkeeper">
+        <label for="bookkeeper">Do you currently have a bookkeeper?</label>
+        <select id="bookkeeper" name="Current Bookkeeper">
           <option value="">Select</option>
           <option>Yes</option>
           <option>No</option>
         </select>
 
-        <div class="section-label">Timeline & Contact</div>
+        <div class="section-label">Timeline &amp; Contact</div>
 
-        <label>When would you like to begin services?</label>
-        <input type="text" name="Desired Start">
+        <label for="start">When would you like to begin services?</label>
+        <input id="start" type="text" name="Desired Start">
 
-        <label>Best time and method to contact you</label>
-        <input type="text" name="Contact Preference">
+        <label for="contact-pref">Best time and method to contact you</label>
+        <input id="contact-pref" type="text" name="Contact Preference">
 
         <div class="section-label">Additional Details</div>
 
-        <label>Anything else you'd like us to know?</label>
-        <textarea name="Additional Notes"></textarea>
+        <label for="notes">Anything else you'd like us to know?</label>
+        <textarea id="notes" name="Additional Notes"></textarea>
 
-        <label style="margin-top:20px;">
-          <input type="checkbox" required>
-          I consent to be contacted regarding bookkeeping services and understand that work begins after payment is submitted.
+        <label class="checkbox-group" style="margin-top:18px;">
+          <span style="display:block;font-weight:700;margin-bottom:6px;">Consent *</span>
+          <label style="margin-top:0;font-weight:500;">
+            <input type="checkbox" name="Consent" value="Yes" required>
+            I consent to be contacted regarding bookkeeping services and understand that work begins after payment is submitted.
+          </label>
         </label>
 
         <button type="submit" class="submit-btn">Submit Secure Intake</button>
+        <p class="secure-note">🔒 Your information is kept confidential and used only to provide bookkeeping services.</p>
+      </form>
+    </div>
+  </main>
 
-        <p class="secure-note">🔒 Your in
+  <!-- STANDARD FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Precision Torque</h4>
+        <p>Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <p><a href="/bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
+        <p><a href="/notary.html" style="color:#ccc;">Mobile Notary</a></p>
+        <p><a href="/vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <p><a href="/index.html" style="color:#ccc;">Home</a></p>
+        <p><a href="/about.html" style="color:#ccc;">About</a></p>
+        <p><a href="/contact.html" style="color:#ccc;">Contact Us</a></p>
+        <p><a href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1" style="color:#ccc;" target="_blank" rel="noopener">Upload Documents</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p>👤 Destinee Montgomery</p>
+        <p>📱 <a href="tel:+16825297128" style="color:#ccc;">(682) 529-7128</a></p>
+        <p>✉️ <a href="mailto:support@destineemontgomery.com" style="color:#ccc;">support@destineemontgomery.com</a></p>
+        <p>📍 Joshua, TX &amp; Surrounding Areas</p>
+        <p style="margin-top:10px;"><a href="/contact.html" class="cta">Get in Touch</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Precision Torque — All Rights Reserved
+    </div>
+  </footer>
+</body>
+</html>
