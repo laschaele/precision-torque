@@ -1,94 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Precision Torque — Bookkeeping, Notary & Vehicle Services</title>
-  <meta name="description" content="Precision Torque provides remote bookkeeping, mobile notary, and vehicle registration services in Joshua, TX and surrounding areas.">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Precision Torque | Bookkeeping • Mobile Notary • Vehicle Registration</title>
+  <meta name="description" content="Precision Torque provides remote bookkeeping, mobile notary, and vehicle registration help in Joshua, TX and surrounding areas." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    /* Page layout helpers (keeps your site-wide colors from assets/styles.css) */
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 56px 0; }
+    .kicker { color: var(--accent); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 12px; }
+    .muted { color: #4b5563; }
+    .btn-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top: 18px; }
+    .btn-ghost { border: 1px solid rgba(255,255,255,0.25); color:#fff; padding:10px 14px; border-radius:6px; font-weight:700; text-decoration:none; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.55); }
+
+    /* Hero */
+    .hero2 {
+      padding: 64px 0 42px;
+      background:
+        radial-gradient(1200px 380px at 20% 0%, rgba(122,31,47,.30), transparent 60%),
+        radial-gradient(900px 360px at 80% 10%, rgba(94,23,34,.28), transparent 60%),
+        linear-gradient(180deg, #0f0f10 0%, #151517 55%, #1b1b1e 100%);
+      color: #fff;
+    }
+    .hero-grid { display:grid; grid-template-columns: 1.15fr .85fr; gap: 26px; align-items: center; }
+    .hero2 h1 { margin: 10px 0 10px; font-size: 44px; line-height: 1.1; }
+    .hero2 p { margin: 0; max-width: 54ch; color: rgba(255,255,255,.84); font-size: 16px; line-height: 1.7; }
+    .hero-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.25);
+    }
+    .badge-row { display:flex; flex-wrap:wrap; gap:10px; margin-top: 18px; }
+    .badge {
+      font-size: 12px; font-weight: 700;
+      color: rgba(255,255,255,.85);
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+    }
+
+    /* Services */
+    .service-grid {
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .card {
+      background:#fff;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.05);
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      min-height: 210px;
+    }
+    .card h3 { margin: 0; font-size: 18px; }
+    .card ul { margin: 0; padding-left: 18px; color:#374151; }
+    .card .cta { align-self:flex-start; margin-top: auto; }
+
+    /* Process */
+    .steps {
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .step {
+      background:#fff;
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    }
+    .step .num {
+      width: 34px; height: 34px; border-radius: 10px;
+      display:grid; place-items:center;
+      background: rgba(122,31,47,.10);
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .step h4 { margin: 0 0 6px; }
+    .step p { margin: 0; color:#4b5563; font-size: 14px; line-height: 1.6; }
+
+    /* Testimonials */
+    .quote-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+    .quote {
+      background:#fff;
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    }
+    .quote p { margin: 0 0 10px; color:#374151; line-height: 1.7; }
+    .quote .who { font-weight: 800; color:#111827; font-size: 14px; }
+    .quote .sub { font-size: 12px; color:#6b7280; margin-top: 2px; }
+
+    /* CTA band */
+    .cta-band {
+      margin: 30px 0 0;
+      border-radius: 16px;
+      padding: 22px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: #fff;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .cta-band h3 { margin: 0; font-size: 18px; }
+    .cta-band p { margin: 4px 0 0; color: rgba(255,255,255,.90); }
+    .cta-band .cta { background: #111; }
+    .cta-band .cta:hover { background: #000; }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .quote-grid { grid-template-columns: 1fr; }
+      .hero2 h1 { font-size: 36px; }
+    }
+    @media (max-width: 520px){
+      .steps { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <!-- Your existing header styles come from assets/styles.css -->
   <header>
     <div class="logo">
       <h2>Precision Torque</h2>
       <div class="tagline">Trusted Local Bookkeeping &amp; Notary</div>
     </div>
-
     <nav aria-label="Main navigation">
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/bookkeeping.html">Bookkeeping</a>
-      <a href="/notary.html">Mobile Notary</a>
-      <a href="/vehicle.html">Vehicle Registration</a>
-      <a href="/blog/index.html">Blog</a>
-      <a href="/contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="bookkeeping.html">Bookkeeping</a>
+      <a href="notary.html">Mobile Notary</a>
+      <a href="vehicle.html">Vehicle Registration</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
-
-    <a href="/contact.html" class="cta">Book Now</a>
+    <a href="contact.html" class="cta">Book Now</a>
   </header>
 
-  <main id="main-content" class="container">
-    <section class="section">
-      <h1 style="margin:0 0 10px 0;">Professional. Reliable. Local.</h1>
-      <p style="max-width:820px;color:#4b5563;margin:0 0 18px 0;">
-        Remote bookkeeping, mobile notary, and vehicle registration services — proudly serving Joshua, TX and surrounding areas.
-      </p>
-      <a href="/contact.html" class="cta">Get Started</a>
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero2">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker">Joshua, TX • Remote &amp; Mobile</div>
+          <h1>Professional support for your paperwork, books, and life.</h1>
+          <p>
+            Remote bookkeeping, mobile notary appointments, and vehicle registration help —
+            delivered with clear communication, clean processes, and no judgment.
+          </p>
+
+          <div class="btn-row">
+            <a class="cta" href="contact.html">Get a Free Consultation</a>
+            <a class="btn-ghost" href="bookkeeping.html">View Services</a>
+          </div>
+
+          <div class="badge-row" aria-label="Trust badges">
+            <div class="badge">QuickBooks Bookkeeping</div>
+            <div class="badge">E&amp;O Insured (Notary)</div>
+            <div class="badge">Local • Reliable • Confidential</div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="kicker" style="color: rgba(255,255,255,.85);">Fast start</div>
+          <h3 style="margin:10px 0 6px;">What can we handle for you?</h3>
+          <ul style="margin:0; padding-left:18px; color: rgba(255,255,255,.85); line-height:1.8;">
+            <li>Monthly bookkeeping + reporting</li>
+            <li>Catch-up / cleanup work</li>
+            <li>Mobile notary scheduling</li>
+            <li>Vehicle paperwork support</li>
+          </ul>
+          <div style="margin-top:14px;">
+            <a class="cta" href="contact.html">Message Me</a>
+          </div>
+          <p style="margin-top:12px; font-size:12px; color: rgba(255,255,255,.75);">
+            Response typically within 1 business day.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section class="section grid">
-      <div class="card">
-        <h3 style="margin-top:0;">Bookkeeping</h3>
-        <p style="color:#4b5563;">Accurate, remote financial management, cleanup, and reporting for small businesses.</p>
-        <div style="margin-top:14px;">
-          <a class="cta" href="/bookkeeping.html">Learn More</a>
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="wrap">
+        <div class="kicker">Services</div>
+        <h2 style="margin:8px 0 8px;">Pick what you need — we’ll keep it simple.</h2>
+        <p class="muted" style="margin:0; max-width: 75ch;">
+          Clear steps, secure handling, and straightforward pricing conversations.
+        </p>
+
+        <div class="service-grid">
+          <article class="card">
+            <h3>Bookkeeping</h3>
+            <p class="muted" style="margin:0;">Monthly support or catch-up — accurate, clean books.</p>
+            <ul>
+              <li>QuickBooks cleanup</li>
+              <li>Transaction categorization</li>
+              <li>Monthly reports</li>
+            </ul>
+            <a class="cta" href="bookkeeping.html">Learn More</a>
+          </article>
+
+          <article class="card">
+            <h3>Mobile Notary</h3>
+            <p class="muted" style="margin:0;">Convenient notarization where you are.</p>
+            <ul>
+              <li>Appointments by request</li>
+              <li>Document checklist help</li>
+              <li>Clear travel fees</li>
+            </ul>
+            <a class="cta" href="notary.html">Schedule</a>
+          </article>
+
+          <article class="card">
+            <h3>Vehicle Registration</h3>
+            <p class="muted" style="margin:0;">Paperwork support to save you time.</p>
+            <ul>
+              <li>Title transfer prep</li>
+              <li>Registration guidance</li>
+              <li>Document submission help</li>
+            </ul>
+            <a class="cta" href="vehicle.html">Submit Paperwork</a>
+          </article>
+        </div>
+
+        <div class="cta-band" role="region" aria-label="Call to action">
+          <div>
+            <h3>Want help choosing the right service?</h3>
+            <p>Send a quick message — I’ll point you to the right next step.</p>
+          </div>
+          <a class="cta" href="contact.html">Book a Consultation</a>
         </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3 style="margin-top:0;">Mobile Notary</h3>
-        <p style="color:#4b5563;">Convenient in-person notarization (and digital when available) — on your schedule.</p>
-        <div style="margin-top:14px;">
-          <a class="cta" href="/notary.html">Schedule Now</a>
+    <!-- PROCESS -->
+    <section class="section" style="background: #f2f2f2;">
+      <div class="wrap">
+        <div class="kicker">How it works</div>
+        <h2 style="margin:8px 0 8px;">A simple process you can trust.</h2>
+        <p class="muted" style="margin:0; max-width: 75ch;">
+          No chaos — just clear steps and consistent communication.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <h4>Reach out</h4>
+            <p>Tell me what you need. I’ll confirm scope and next steps.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <h4>Send documents</h4>
+            <p>Secure link or email instructions — whatever is easiest.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <h4>Work begins</h4>
+            <p>I handle the details and keep you updated.</p>
+          </div>
+          <div class="step">
+            <div class="num">4</div>
+            <h4>Get results</h4>
+            <p>Completed deliverables, clean paperwork, and peace of mind.</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3 style="margin-top:0;">Vehicle Registration</h3>
-        <p style="color:#4b5563;">We handle DMV paperwork remotely to save you time and stress.</p>
-        <div style="margin-top:14px;">
-          <a class="cta" href="/vehicle.html">Submit Paperwork</a>
+    <!-- TESTIMONIALS (placeholder text you can edit later) -->
+    <section class="section">
+      <div class="wrap">
+        <div class="kicker">What clients say</div>
+        <h2 style="margin:8px 0 8px;">Professional, reliable, and easy to work with.</h2>
+
+        <div class="quote-grid">
+          <div class="quote">
+            <p>“Everything was explained clearly, and the process was painless. I finally feel organized.”</p>
+            <div class="who">Client</div>
+            <div class="sub">Bookkeeping</div>
+          </div>
+          <div class="quote">
+            <p>“On time, professional, and made the notary appointment simple.”</p>
+            <div class="who">Client</div>
+            <div class="sub">Mobile Notary</div>
+          </div>
+          <div class="quote">
+            <p>“Saved me a DMV trip — worth it just for the time and stress I didn’t have to deal with.”</p>
+            <div class="who">Client</div>
+            <div class="sub">Vehicle Paperwork</div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Your existing footer styles come from assets/styles.css -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h4>Precision Torque</h4>
-        <p>Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
+        <p style="color:#ddd">Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
       </div>
-
       <div class="footer-section">
         <h4>Services</h4>
-        <p><a href="/bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
-        <p><a href="/notary.html" style="color:#ccc;">Mobile Notary</a></p>
-        <p><a href="/vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
+        <p><a href="bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
+        <p><a href="notary.html" style="color:#ccc;">Mobile Notary</a></p>
+        <p><a href="vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
       </div>
-
       <div class="footer-section">
         <h4>Quick Links</h4>
-        <p><a href="/index.html" style="color:#ccc;">Home</a></p>
-        <p><a href="/contact.html" style="color:#ccc;">Contact Us</a></p>
+        <p><a href="index.html" style="color:#ccc;">Home</a></p>
+        <p><a href="contact.html" style="color:#ccc;">Contact Us</a></p>
         <p><a href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1" style="color:#ccc;" target="_blank" rel="noopener">Upload Documents</a></p>
       </div>
-
       <div class="footer-section">
         <h4>Contact Info</h4>
         <p>👤 Destinee Montgomery</p>
@@ -97,7 +345,6 @@
         <p>📍 Joshua, TX &amp; Surrounding Areas</p>
       </div>
     </div>
-
     <div class="footer-bottom">
       &copy; 2025 Precision Torque — All Rights Reserved
     </div>
