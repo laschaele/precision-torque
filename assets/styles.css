@@ -455,3 +455,13 @@ footer{
 @media (max-width: 520px){
   .steps{ grid-template-columns:1fr; }
 }
+/* === FIX BLOG THUMBNAIL OVERSIZE ISSUE === */
+.resource-thumb {
+  width: 100%;
+  max-width: 160px;     /* THIS is the missing piece */
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain; /* SVG-safe */
+  border-radius: var(--radius-md);
+  background: rgba(0,0,0,.04);
+}
