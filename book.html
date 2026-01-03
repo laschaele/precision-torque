@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Book a Free Consultation | Precision Torque</title>
+  <meta name="description" content="Book a free consultation for bookkeeping, mobile notary, or vehicle paperwork support with Precision Torque." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Page-only booking styles -->
+  <style>
+    .book-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+      align-items: start;
+    }
+
+    .book-panel{
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .book-panel h3{
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .book-panel p{
+      margin: 0;
+      color:#4b5563;
+    }
+
+    .book-panel ul{
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color:#374151;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .calendly-inline-widget{
+      min-width: 320px;
+      height: 720px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      background: var(--surface);
+    }
+
+    @media (max-width: 980px){
+      .book-grid{ grid-template-columns: 1fr; }
+      .calendly-inline-widget{ height: 760px; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h2>Precision Torque</h2>
+      <div class="tagline">Trusted Local Bookkeeping &amp; Notary</div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/blog/index.html">Resources</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <a href="/book.html" class="cta" aria-current="page">Book Now</a>
+  </header>
+
+  <!-- Main -->
+  <main id="main-content">
+    <section class="section">
+      <div class="wrap">
+        <div class="kicker">Booking</div>
+        <h1 style="margin-top:8px;">Book a free consultation</h1>
+
+        <p class="muted" style="max-width:72ch; margin-top:10px;">
+          Choose a time that works for you. We’ll review what you need and the best next step —
+          no pressure, no obligation.
+        </p>
+
+        <div class="book-grid">
+          <!-- Left panel -->
+          <aside class="book-panel" aria-label="What to expect">
+            <h3>What we’ll cover</h3>
+            <p>Short, helpful, and focused on your situation.</p>
+
+            <ul>
+              <li>Which service fits your needs</li>
+              <li>What documents to gather (if any)</li>
+              <li>Timeline and pricing guidance</li>
+            </ul>
+
+            <div class="note">
+              Prefer to text or call instead?<br />
+              📱 <a href="tel:+16825297128">(682) 529-7128</a>
+            </div>
+          </aside>
+
+          <!-- Calendly embed (ADDED FOR YOU) -->
+          <div aria-label="Schedule a consultation">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget"
+                 data-url="https://calendly.com/destineemontgomery-support"
+                 style="min-width:320px;height:700px;">
+            </div>
+            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+          </div>
+        </div>
+
+        <!-- CTA band -->
+        <div class="cta-band" role="region" aria-label="Need something else">
+          <div>
+            <h3 style="margin:0;">Not seeing a time that works?</h3>
+            <p style="margin:4px 0 0; color: rgba(255,255,255,.90);">
+              Send a message and I’ll do my best to accommodate.
+            </p>
+          </div>
+          <a class="cta" href="/contact.html">Message Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Precision Torque</h4>
+        <p style="color:#ddd">
+          Professional bookkeeping, mobile notary, and vehicle registration services
+          for Joshua, TX and surrounding areas.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <p><a href="/index.html">Home</a></p>
+        <p><a href="/services.html">Services</a></p>
+        <p><a href="/blog/index.html">Resources</a></p>
+        <p><a href="/contact.html">Contact</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p>👤 Destinee Montgomery</p>
+        <p>📱 <a href="tel:+16825297128">(682) 529-7128</a></p>
+        <p>✉️ <a href="mailto:support@destineemontgomery.com">support@destineemontgomery.com</a></p>
+        <p>📍 Joshua, TX &amp; Surrounding Areas</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Precision Torque — All Rights Reserved
+    </div>
+  </footer>
+</body>
+</html>
