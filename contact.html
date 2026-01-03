@@ -1,25 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-  <div class="logo">
-    <h2>Precision Torque</h2>
-    <div class="tagline">Trusted Local Bookkeeping &amp; Notary</div>
-  </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <nav aria-label="Main navigation">
-    <a href="/index.html">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/services.html">Services</a>
-    <a href="/blog/index.html">Resources</a>
-    <a href="/contact.html" aria-current="page">Contact</a>
-  </nav>
+  <title>Contact — Precision Torque</title>
+  <meta name="description" content="Contact Precision Torque for bookkeeping, mobile notary, and vehicle paperwork support in Joshua, TX." />
 
-  <a href="/book.html" class="cta">Book Now</a>
-</header
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237a1f2f;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%235e1722;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='98' fill='url(%23grad)' /%3E%3Cg transform='translate(100,70)'%3E%3Ccircle cx='0' cy='0' r='22' fill='none' stroke='%23fff' stroke-width='3' /%3E%3Cpath d='M -8,-8 L 8,8 M 8,-8 L -8,8' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' /%3E%3Crect x='-6' y='18' width='12' height='24' fill='%23fff' rx='2' /%3E%3C/g%3E%3Ctext x='100' y='145' font-size='28' font-weight='700' text-anchor='middle' fill='%23fff' font-family='Arial,sans-serif'%3EPRECISION TORQUE%3C/text%3E%3Ctext x='100' y='162' font-size='11' text-anchor='middle' fill='%23ddd' font-family='Arial,sans-serif'%3EProfessional Services%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Precision Torque",
+    "telephone": "+16825297128",
+    "email": "support@destineemontgomery.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Joshua",
+      "addressRegion": "TX"
+    }
+  }
+  </script>
+
+  <style>
+    .form-card { max-width: 860px; margin: 0 auto; }
+
+    .contact-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 760px){
+      .contact-row{ grid-template-columns: 1fr; }
+    }
+
+    label{
+      font-weight: 800;
+      font-size: 13px;
+      color: #111827;
+      display:block;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea{
+      width:100%;
+      padding: 11px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.12);
+      background:#fff;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    textarea{ resize: vertical; }
+
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(122,31,47,0.55);
+      box-shadow: 0 0 0 4px rgba(122,31,47,0.10);
+    }
+
+    .content-link{
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    .helper{
+      margin-top: 10px;
+      font-size: 12px;
+      color:#6b7280;
+    }
+  </style>
+</head>
 
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <!-- HEADER -->
   <header>
     <div class="logo">
       <h2>Precision Torque</h2>
@@ -27,14 +96,14 @@
     </div>
 
     <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
       <a href="/services.html">Services</a>
-      <a href="blog/index.html">Resources</a>
-      <a href="contact.html">Contact</a>
+      <a href="/blog/index.html">Resources</a>
+      <a href="/contact.html" aria-current="page">Contact</a>
     </nav>
 
-    <a href="book.html" class="cta">Book Now</a>
+    <a href="/book.html" class="cta">Book Now</a>
   </header>
 
   <main id="main-content">
@@ -44,14 +113,12 @@
         <div>
           <div class="kicker">Contact</div>
           <h1>Tell me what you need — I’ll guide the next step.</h1>
-          <p>
-            Use the form below to request a consultation, ask a question, or start a service.
-          </p>
+          <p>Use the form below to request a consultation, ask a question, or start a service.</p>
 
           <div class="btn-row">
-            <a class="cta" href="services.html">View Services</a>
-            <a class="btn-ghost" href="services.html">← Back to Services</a>
-            <a class="btn-ghost" href="blog/index.html">Browse Resources</a>
+            <a class="cta" href="/services.html">View Services</a>
+            <a class="btn-ghost" href="/services.html">← Back to Services</a>
+            <a class="btn-ghost" href="/blog/index.html">Browse Resources</a>
           </div>
 
           <div class="badge-row" style="margin-top:16px;">
@@ -61,7 +128,6 @@
           </div>
         </div>
 
-        <!-- Match the site's dark hero panel -->
         <aside class="hero-panel" aria-label="Direct contact">
           <div class="kicker">Direct contact</div>
           <h3 style="margin:10px 0 6px;">Reach me here</h3>
@@ -88,8 +154,8 @@
     <section class="section">
       <div class="wrap">
         <div class="card form-card">
-          <h2 style="margin:0 0 8px;">Contact form</h2>
-          <p class="muted" style="margin:0 0 18px;">
+          <h2>Contact form</h2>
+          <p class="muted" style="margin-bottom:18px;">
             The more details you share, the faster I can help.
           </p>
 
@@ -125,28 +191,19 @@
 
             <div style="margin-top:10px;">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" placeholder="Tell me what you need help with, deadlines, and any details that matter."></textarea>
+              <textarea id="message" name="message" rows="6"></textarea>
             </div>
 
             <button type="submit" class="cta">Submit Request</button>
-
-            <p class="muted" style="margin-top:14px;">
-              Or contact directly:
-              <a class="content-link" href="tel:+16825297128">(682) 529-7128</a>
-              &nbsp;•&nbsp;
-              <a class="content-link" href="mailto:support@destineemontgomery.com">support@destineemontgomery.com</a>
-            </p>
           </form>
         </div>
 
-        <div class="cta-band" role="region" aria-label="Call to action">
+        <div class="cta-band">
           <div>
-            <h3 style="margin:0;">Prefer to start with a service page?</h3>
-            <p style="margin:4px 0 0; color: rgba(255,255,255,.90);">
-              Click Services to choose bookkeeping, notary, or vehicle paperwork.
-            </p>
+            <h3>Prefer to start with a service page?</h3>
+            <p>Click Services to choose bookkeeping, notary, or vehicle paperwork.</p>
           </div>
-          <a class="cta" href="services.html">Go to Services</a>
+          <a class="cta" href="/services.html">Go to Services</a>
         </div>
       </div>
     </section>
@@ -156,31 +213,23 @@
     <div class="footer-content">
       <div class="footer-section">
         <h4>Precision Torque</h4>
-        <p style="color:#ddd">Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Services</h4>
-        <p><a href="bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
-        <p><a href="notary.html" style="color:#ccc;">Mobile Notary</a></p>
-        <p><a href="vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
+        <p>Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
       </div>
 
       <div class="footer-section">
         <h4>Quick Links</h4>
-        <p><a href="index.html" style="color:#ccc;">Home</a></p>
-        <p><a href="about.html" style="color:#ccc;">About</a></p>
-        <p><a href="services.html" style="color:#ccc;">Services</a></p>
-        <p><a href="blog/index.html" style="color:#ccc;">Resources</a></p>
+        <p><a href="/index.html">Home</a></p>
+        <p><a href="/about.html">About</a></p>
+        <p><a href="/services.html">Services</a></p>
+        <p><a href="/blog/index.html">Resources</a></p>
       </div>
 
       <div class="footer-section">
         <h4>Contact Info</h4>
         <p>👤 Destinee Montgomery</p>
-        <p>📱 <a href="tel:+16825297128" style="color:#ccc;">(682) 529-7128</a></p>
-        <p>✉️ <a href="mailto:support@destineemontgomery.com" style="color:#ccc;">support@destineemontgomery.com</a></p>
+        <p>📱 <a href="tel:+16825297128">(682) 529-7128</a></p>
+        <p>✉️ <a href="mailto:support@destineemontgomery.com">support@destineemontgomery.com</a></p>
         <p>📍 Joshua, TX &amp; Surrounding Areas</p>
-        <p style="color:#ddd;">🔒 Insured &amp; Bonded (E&amp;O for Notary)</p>
       </div>
     </div>
 
