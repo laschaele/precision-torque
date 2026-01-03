@@ -7,153 +7,11 @@
   <meta name="description" content="Precision Torque provides remote bookkeeping, mobile notary, and vehicle registration help in Joshua, TX and surrounding areas." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
-
-  <style>
-    /* Page layout helpers (keeps your site-wide colors from assets/styles.css) */
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 56px 0; }
-    .kicker { color: var(--accent); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 12px; }
-    .muted { color: #4b5563; }
-    .btn-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-start; margin-top:18px; }
-    .btn-ghost{
-  border: 1px solid rgba(122,31,47,0.35);
-  color: var(--accent);
-  padding:10px 14px;
-  border-radius:8px;
-  font-weight:800;
-  text-decoration:none;
-  background: rgba(122,31,47,0.06);
-}
-.btn-ghost:hover{
-  background: rgba(122,31,47,0.10);
-  border-color: rgba(122,31,47,0.55);
-}
-    /* Hero */
-    .hero2 {
-      padding: 56px 0 42px;
-      background:
-        radial-gradient(1200px 380px at 20% 0%, rgba(122,31,47,.30), transparent 60%),
-        radial-gradient(900px 360px at 80% 10%, rgba(94,23,34,.28), transparent 60%),
-        linear-gradient(180deg, #0f0f10 0%, #151517 55%, #1b1b1e 100%);
-      color: #fff;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .hero-grid { display:grid; grid-template-columns: 1.15fr .85fr; gap: 26px; align-items: center; }
-    .hero2 h1 { margin: 10px 0 10px; font-size: 48px; line-height: 1.1; }
-    .hero2 p { margin: 0; max-width: 54ch; color: rgba(255,255,255,.84); font-size: 16px; line-height: 1.7; }
-    .hero-card {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 14px 30px rgba(0,0,0,.25);
-    }
-    .badge-row { display:flex; flex-wrap:wrap; gap:10px; margin-top: 18px; }
-    .badge {
-      font-size: 12px; font-weight: 700;
-      color: rgba(255,255,255,.85);
-      border: 1px solid rgba(255,255,255,.18);
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.18);
-    }
-
-    /* Services */
-    .service-grid {
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 22px;
-    }
-    .card {
-      background:#fff;
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-      border: 1px solid rgba(0,0,0,0.05);
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
-      min-height: 210px;
-    }
-    .card h3 { margin: 0; font-size: 18px; }
-    .card ul { margin: 0; padding-left: 18px; color:#374151; }
-    .card .cta { align-self:flex-start; margin-top: auto; }
-
-    /* Process */
-    .steps {
-      display:grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .step {
-      background:#fff;
-      border-radius: 14px;
-      padding: 16px;
-      border: 1px solid rgba(0,0,0,0.05);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-    }
-    .step .num {
-      width: 34px; height: 34px; border-radius: 10px;
-      display:grid; place-items:center;
-      background: rgba(122,31,47,.10);
-      color: var(--accent);
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    .step h4 { margin: 0 0 6px; }
-    .step p { margin: 0; color:#4b5563; font-size: 14px; line-height: 1.6; }
-
-    /* Testimonials */
-    .quote-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 18px; }
-    .quote {
-      background:#fff;
-      border-radius: 14px;
-      padding: 18px;
-      border: 1px solid rgba(0,0,0,0.05);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-    }
-    .quote p { margin: 0 0 10px; color:#374151; line-height: 1.7; }
-    .quote .who { font-weight: 800; color:#111827; font-size: 14px; }
-    .quote .sub { font-size: 12px; color:#6b7280; margin-top: 2px; }
-
-    /* CTA band */
-    .cta-band {
-      margin: 30px 0 0;
-      border-radius: 16px;
-      padding: 22px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-      color: #fff;
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .cta-band h3 { margin: 0; font-size: 18px; }
-    .cta-band p { margin: 4px 0 0; color: rgba(255,255,255,.90); }
-    .cta-band .cta { background: #111; }
-    .cta-band .cta:hover { background: #000; }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid { grid-template-columns: 1fr; }
-      .service-grid { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; }
-      .quote-grid { grid-template-columns: 1fr; }
-      .hero2 h1 { font-size: 36px; }
-    }
-    @media (max-width: 520px){
-      .steps { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- Your existing header styles come from assets/styles.css -->
   <header>
     <div class="logo">
       <h2>Precision Torque</h2>
@@ -162,10 +20,8 @@
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="bookkeeping.html">Bookkeeping</a>
-      <a href="notary.html">Mobile Notary</a>
-      <a href="vehicle.html">Vehicle Registration</a>
-      <a href="blog/index.html">Blog</a>
+      <a href="services.html">Services</a>
+      <a href="tips/index.html">Tips</a>
       <a href="contact.html">Contact</a>
     </nav>
     <a href="contact.html" class="cta">Book Now</a>
@@ -173,50 +29,50 @@
 
   <main id="main-content">
     <!-- HERO -->
-    <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="kicker">Joshua, TX • Remote &amp; Mobile</div>
-      <h1>Professional support for your paperwork, books, and life.</h1>
-      <p>
-        Remote bookkeeping, mobile notary appointments, and vehicle registration help —
-        delivered with clear communication, clean processes, and no judgment.
-      </p>
+    <section class="hero hero--dark">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker">Joshua, TX • Remote &amp; Mobile</div>
+          <h1>Professional support for your paperwork, books, and life.</h1>
+          <p>
+            Remote bookkeeping, mobile notary appointments, and vehicle registration help —
+            delivered with clear communication, clean processes, and no judgment.
+          </p>
 
-      <div class="btn-row">
-        <a class="cta" href="contact.html">Get a Free Consultation</a>
-        <a class="btn-ghost" href="bookkeeping.html">View Services</a>
+          <div class="btn-row">
+            <a class="cta" href="contact.html">Get a Free Consultation</a>
+            <a class="btn-ghost" href="services.html">View Services</a>
+          </div>
+
+          <div class="badge-row" aria-label="Trust badges">
+            <div class="badge">QuickBooks Bookkeeping</div>
+            <div class="badge">E&amp;O Insured (Notary)</div>
+            <div class="badge">Local • Reliable • Confidential</div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="kicker">Fast start</div>
+          <h3 style="margin:10px 0 6px;">What can we handle for you?</h3>
+          <ul style="margin:0; padding-left:18px; color: rgba(255,255,255,.86); line-height:1.8;">
+            <li>Monthly bookkeeping + reporting</li>
+            <li>Catch-up / cleanup work</li>
+            <li>Mobile notary scheduling</li>
+            <li>Vehicle paperwork support</li>
+          </ul>
+
+          <div style="margin-top:14px;">
+            <a class="cta" href="contact.html">Message Me</a>
+          </div>
+
+          <p style="margin-top:12px; font-size:12px; color: rgba(255,255,255,.75);">
+            Response typically within 1 business day.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="badge-row" aria-label="Trust badges">
-        <div class="badge">QuickBooks Bookkeeping</div>
-        <div class="badge">E&amp;O Insured (Notary)</div>
-        <div class="badge">Local • Reliable • Confidential</div>
-      </div>
-    </div>
-
-    <div class="hero-panel">
-      <div class="kicker">Fast start</div>
-      <h3 style="margin:10px 0 6px;">What can we handle for you?</h3>
-      <ul style="margin:0; padding-left:18px; color: rgba(255,255,255,.86); line-height:1.8;">
-        <li>Monthly bookkeeping + reporting</li>
-        <li>Catch-up / cleanup work</li>
-        <li>Mobile notary scheduling</li>
-        <li>Vehicle paperwork support</li>
-      </ul>
-
-      <div style="margin-top:14px;">
-        <a class="cta" href="contact.html">Message Me</a>
-      </div>
-
-      <p style="margin-top:12px; font-size:12px; color: rgba(255,255,255,.75);">
-        Response typically within 1 business day.
-      </p>
-    </div>
-  </div>
-</section>
-
-    <!-- SERVICES -->
+    <!-- SERVICES PREVIEW -->
     <section class="section">
       <div class="wrap">
         <div class="kicker">Services</div>
@@ -245,7 +101,7 @@
               <li>Document checklist help</li>
               <li>Clear travel fees</li>
             </ul>
-            <a class="cta" href="notary.html">Schedule</a>
+            <a class="cta" href="notary.html">Learn More</a>
           </article>
 
           <article class="card">
@@ -256,7 +112,7 @@
               <li>Registration guidance</li>
               <li>Document submission help</li>
             </ul>
-            <a class="cta" href="vehicle.html">Submit Paperwork</a>
+            <a class="cta" href="vehicle.html">Learn More</a>
           </article>
         </div>
 
@@ -271,7 +127,7 @@
     </section>
 
     <!-- PROCESS -->
-    <section class="section" style="background: #f2f2f2;">
+    <section class="section" style="background: var(--surface-muted);">
       <div class="wrap">
         <div class="kicker">How it works</div>
         <h2 style="margin:8px 0 8px;">A simple process you can trust.</h2>
@@ -304,7 +160,7 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS (placeholder text you can edit later) -->
+    <!-- TESTIMONIALS -->
     <section class="section">
       <div class="wrap">
         <div class="kicker">What clients say</div>
@@ -331,7 +187,6 @@
     </section>
   </main>
 
-  <!-- Your existing footer styles come from assets/styles.css -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
@@ -347,8 +202,9 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <p><a href="index.html" style="color:#ccc;">Home</a></p>
+        <p><a href="services.html" style="color:#ccc;">Services</a></p>
+        <p><a href="tips/index.html" style="color:#ccc;">Tips</a></p>
         <p><a href="contact.html" style="color:#ccc;">Contact Us</a></p>
-        <p><a href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1" style="color:#ccc;" target="_blank" rel="noopener">Upload Documents</a></p>
       </div>
       <div class="footer-section">
         <h4>Contact Info</h4>

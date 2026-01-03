@@ -1,105 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services | Precision Torque</title>
-  <meta name="description" content="All Precision Torque services in one place: bookkeeping, mobile notary, and vehicle registration support in Joshua, TX and surrounding areas." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Precision Torque</title>
+  <meta name="description" content="Explore Precision Torque services: bookkeeping, mobile notary, and vehicle registration support in Joshua, TX." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
-
-  <style>
-    /* Uses your site colors from assets/styles.css */
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    .hero {
-      padding: 56px 0 36px;
-      background:
-        radial-gradient(1200px 380px at 20% 0%, rgba(122,31,47,.30), transparent 60%),
-        radial-gradient(900px 360px at 80% 10%, rgba(94,23,34,.28), transparent 60%),
-        linear-gradient(180deg, #0f0f10 0%, #151517 55%, #1b1b1e 100%);
-      color: #fff;
-    }
-    .hero-grid { display:grid; grid-template-columns: 1.15fr .85fr; gap: 18px; align-items: start; }
-    .kicker { color: rgba(255,255,255,.85); font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:12px; }
-    .hero h1 { margin: 10px 0 10px; font-size: 40px; line-height:1.1; }
-    .hero p { margin: 0; max-width: 58ch; color: rgba(255,255,255,.86); line-height:1.75; }
-    .btn-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
-    .btn-ghost { border: 1px solid rgba(255,255,255,0.25); color:#fff; padding:10px 14px; border-radius:6px; font-weight:800; text-decoration:none; }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.55); }
-    .panel {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 14px;
-      padding: 16px;
-      box-shadow: 0 14px 30px rgba(0,0,0,.25);
-    }
-    .badge-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
-    .badge {
-      font-size: 12px; font-weight: 800;
-      color: rgba(255,255,255,.88);
-      border: 1px solid rgba(255,255,255,.18);
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(0,0,0,.18);
-    }
-
-    .section { padding: 38px 0; }
-    .muted { color:#4b5563; }
-    .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .service-card { display:flex; flex-direction:column; gap:10px; }
-    .service-card h2 { margin: 0; font-size: 22px; }
-    .service-card ul { margin: 0; padding-left: 18px; color:#374151; }
-    .price-row { display:flex; flex-wrap:wrap; gap:10px; margin-top: 6px; }
-    .pill {
-      display:inline-block;
-      border: 1px solid rgba(0,0,0,.08);
-      background: #fff;
-      border-radius: 999px;
-      padding: 8px 10px;
-      font-weight: 800;
-      color:#111;
-      font-size: 13px;
-    }
-    .subtle { font-size: 13px; color:#6b7280; margin: 0; }
-
-    .cta-band{
-      margin-top: 18px;
-      border-radius: 14px;
-      padding: 18px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .cta-band h3 { margin:0; font-size: 18px; }
-    .cta-band p { margin: 4px 0 0; color: rgba(255,255,255,.92); }
-    .cta-band .cta { background:#111; }
-    .cta-band .cta:hover { background:#000; }
-
-    .process {
-      background:#f2f2f2;
-      border-top: 1px solid rgba(0,0,0,.04);
-      border-bottom: 1px solid rgba(0,0,0,.04);
-    }
-    .steps { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-top: 14px; }
-    .step { background:#fff; border-radius: 14px; padding: 14px; border: 1px solid rgba(0,0,0,.05); box-shadow: 0 8px 18px rgba(0,0,0,.06); }
-    .num { width: 34px; height: 34px; border-radius: 10px; display:grid; place-items:center; background: rgba(122,31,47,.10); color: var(--accent); font-weight: 900; margin-bottom: 10px; }
-    .step h4 { margin: 0 0 6px; }
-    .step p { margin: 0; color:#4b5563; font-size: 14px; line-height: 1.6; }
-
-    @media (max-width: 980px){
-      .hero-grid { grid-template-columns: 1fr; }
-      .grid-2 { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; }
-      .hero h1 { font-size: 34px; }
-    }
-    @media (max-width: 520px){
-      .steps { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 
 <body>
@@ -111,191 +18,93 @@
       <div class="tagline">Trusted Local Bookkeeping &amp; Notary</div>
     </div>
     <nav aria-label="Main navigation">
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/services.html">Services</a>
-      <a href="/blog/index.html">Blog</a>
-      <a href="/contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="tips/index.html">Tips</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a href="/contact.html" class="cta">Book Now</a>
+    <a href="contact.html" class="cta">Book Now</a>
   </header>
 
   <main id="main-content">
-    <!-- HERO -->
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="kicker">All Services • One Page</div>
-          <h1>Choose what you need — I’ll keep it simple.</h1>
-          <p>
-            Bookkeeping, mobile notary, and vehicle paperwork support for Joshua, TX and surrounding areas.
-            Clear steps, secure handling, and straightforward communication.
+          <div class="kicker">Services</div>
+          <h1>Choose the support you need.</h1>
+          <p class="muted" style="max-width:80ch;">
+            Click a service for details, pricing guidance, and next steps.
           </p>
 
-          <div class="btn-row">
-            <a class="cta" href="/contact.html">Get a Free Consultation</a>
-            <a class="btn-ghost" href="#pricing">See Pricing</a>
+          <div class="badge-row">
+            <div class="badge">Clear process</div>
+            <div class="badge">Fast communication</div>
+            <div class="badge">Joshua, TX</div>
           </div>
 
-          <div class="badge-row" aria-label="Trust badges">
-            <div class="badge">QuickBooks Bookkeeping</div>
-            <div class="badge">E&amp;O Insured (Notary)</div>
-            <div class="badge">Local • Reliable • Confidential</div>
+          <div class="btn-row">
+            <a class="cta" href="contact.html">Book Free Consultation</a>
+            <a class="btn-ghost" href="tips/index.html">Browse Tips</a>
           </div>
         </div>
 
-        <aside class="panel" aria-label="Quick links">
-          <h3 style="margin:0 0 8px;">Quick Actions</h3>
-          <p class="subtle" style="color: rgba(255,255,255,.78);">
-            Start here and I’ll route you to the right next step.
-          </p>
-          <div style="display:flex; flex-direction:column; gap:10px; margin-top:12px;">
-            <a class="cta" href="/bookkeeping-intake.html">Bookkeeping Intake</a>
-            <a class="btn-ghost" href="/contact.html">Ask a Question</a>
-          </div>
-          <p style="margin:12px 0 0; font-size:12px; color: rgba(255,255,255,.72_show);"></p>
+        <aside class="hero-card" aria-label="What to expect">
+          <h3 style="margin:0 0 10px;">What to expect</h3>
+          <ul>
+            <li>Quick questions to understand your needs</li>
+            <li>A clear quote or plan before starting</li>
+            <li>Simple next steps (no confusion)</li>
+          </ul>
         </aside>
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section class="section">
       <div class="wrap">
-        <h2 style="margin:0 0 6px;">Services</h2>
-        <p class="muted" style="margin:0 0 16px; max-width: 75ch;">
-          Select a service below. If you’re not sure, just message me — I’ll help you choose.
+        <div class="kicker">Service Menu</div>
+        <h2 style="margin:8px 0 8px;">Core services</h2>
+        <p class="muted" style="margin:0; max-width: 80ch;">
+          These pages are intentionally not in the top navigation—just click what you need.
         </p>
 
-        <div class="grid-2" id="pricing">
-          <!-- Bookkeeping -->
-          <article class="card service-card">
-            <h2>Bookkeeping</h2>
-            <p class="muted" style="margin:0;">Monthly support or catch-up — accurate, clean books.</p>
-
-            <div class="price-row">
-              <span class="pill">Starter — $199/mo</span>
-              <span class="pill">Growth — $349/mo</span>
-              <span class="pill">Catch-up — $75/hr</span>
-              <span class="pill">Setup — $175</span>
+        <div class="service-grid">
+          <article class="card">
+            <h3>📘 Bookkeeping</h3>
+            <p>Monthly bookkeeping, cleanup/catch-up, reconciliations, invoicing support, and QuickBooks setup.</p>
+            <div class="btn-row" style="margin-top:12px;">
+              <a class="cta" href="bookkeeping.html">Learn More</a>
+              <a class="btn-ghost" href="bookkeeping-intake.html">Start Intake</a>
             </div>
-
-            <ul>
-              <li>QuickBooks cleanup &amp; organization</li>
-              <li>Transaction categorization</li>
-              <li>Monthly reconciliation &amp; summary</li>
-            </ul>
-
-            <div class="btn-row" style="margin-top:auto;">
-              <a class="cta" href="/bookkeeping-intake.html">Start Intake</a>
-              <a class="btn-ghost" style="color:#111; border-color: rgba(0,0,0,.12);" href="/bookkeeping.html">Details</a>
-            </div>
-
-            <p class="subtle">✅ Free consultation before all services.</p>
           </article>
 
-          <!-- Mobile Notary -->
-          <article class="card service-card">
-            <h2>Mobile Notary</h2>
-            <p class="muted" style="margin:0;">Convenient notarization where you are (when available).</p>
-
-            <div class="price-row">
-              <span class="pill">$10–$25 per signature</span>
-              <span class="pill">Travel fee varies</span>
+          <article class="card">
+            <h3>🖊️ Mobile Notary</h3>
+            <p>Convenient mobile notary service with straightforward scheduling and clear pricing.</p>
+            <div class="btn-row" style="margin-top:12px;">
+              <a class="cta" href="notary.html">Learn More</a>
+              <a class="btn-ghost" href="contact.html">Request Appointment</a>
             </div>
-
-            <ul>
-              <li>Appointments by request</li>
-              <li>Document checklist support</li>
-              <li>Clear travel fees upfront</li>
-            </ul>
-
-            <div class="btn-row" style="margin-top:auto;">
-              <a class="cta" href="/contact.html">Schedule Notary</a>
-              <a class="btn-ghost" style="color:#111; border-color: rgba(0,0,0,.12);" href="/notary.html">Details</a>
-            </div>
-
-            <p class="subtle">🔒 E&amp;O insured for notary services.</p>
           </article>
 
-          <!-- Vehicle Registration -->
-          <article class="card service-card">
-            <h2>Vehicle Registration</h2>
-            <p class="muted" style="margin:0;">Paperwork support to help you avoid delays and extra trips.</p>
-
-            <div class="price-row">
-              <span class="pill">Registration — $25</span>
-              <span class="pill">Titling — $40</span>
-              <span class="pill">DMV filing — $10–$15</span>
-            </div>
-
-            <ul>
-              <li>Title transfer prep</li>
-              <li>Registration guidance</li>
-              <li>Document submission help</li>
-            </ul>
-
-            <div class="btn-row" style="margin-top:auto;">
-              <a class="cta" href="/contact.html">Submit Paperwork</a>
-              <a class="btn-ghost" style="color:#111; border-color: rgba(0,0,0,.12);" href="/vehicle.html">Details</a>
-            </div>
-
-            <p class="subtle">Tip: ask about what to bring before you go.</p>
-          </article>
-
-          <!-- Bundle / Upsell block (optional) -->
-          <article class="card service-card">
-            <h2>Need a custom quote?</h2>
-            <p class="muted" style="margin:0;">
-              If your situation is messy, time-sensitive, or you need multiple services, I’ll quote it clearly.
-            </p>
-
-            <ul>
-              <li>Small business admin help</li>
-              <li>Priority scheduling (as available)</li>
-              <li>Multi-service packages</li>
-            </ul>
-
-            <div class="cta-band" aria-label="Call to action">
-              <div>
-                <h3>Tell me what you need.</h3>
-                <p>I’ll respond with your next best step.</p>
-              </div>
-              <a class="cta" href="/contact.html">Message Me</a>
+          <article class="card">
+            <h3>🚗 Vehicle Registration</h3>
+            <p>Help with vehicle paperwork and registration support to reduce stress and save time.</p>
+            <div class="btn-row" style="margin-top:12px;">
+              <a class="cta" href="vehicle.html">Learn More</a>
+              <a class="btn-ghost" href="contact.html">Ask a Question</a>
             </div>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- PROCESS -->
-    <section class="section process">
-      <div class="wrap">
-        <h2 style="margin:0 0 6px;">How it works</h2>
-        <p class="muted" style="margin:0; max-width: 75ch;">
-          A clean process with clear communication — no chaos.
-        </p>
-
-        <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <h4>Reach out</h4>
-            <p>Tell me what you need and I’ll confirm scope and next steps.</p>
+        <div class="cta-band" role="region" aria-label="Call to action">
+          <div>
+            <h3 style="margin:0;">Not sure which one applies?</h3>
+            <p style="margin:4px 0 0; color: rgba(255,255,255,.90);">
+              Send a message — I’ll point you to the right page and next step.
+            </p>
           </div>
-          <div class="step">
-            <div class="num">2</div>
-            <h4>Send documents</h4>
-            <p>Secure link or email instructions — whatever is easiest.</p>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <h4>Work begins</h4>
-            <p>I handle the details and keep you updated throughout.</p>
-          </div>
-          <div class="step">
-            <div class="num">4</div>
-            <h4>Get results</h4>
-            <p>Completed deliverables + peace of mind.</p>
-          </div>
+          <a class="cta" href="contact.html">Contact</a>
         </div>
       </div>
     </section>
@@ -309,16 +118,16 @@
       </div>
       <div class="footer-section">
         <h4>Services</h4>
-        <p><a href="/services.html" style="color:#ccc;">All Services</a></p>
-        <p><a href="/bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
-        <p><a href="/notary.html" style="color:#ccc;">Mobile Notary</a></p>
-        <p><a href="/vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
+        <p><a href="bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
+        <p><a href="notary.html" style="color:#ccc;">Mobile Notary</a></p>
+        <p><a href="vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
       </div>
       <div class="footer-section">
         <h4>Quick Links</h4>
-        <p><a href="/index.html" style="color:#ccc;">Home</a></p>
-        <p><a href="/contact.html" style="color:#ccc;">Contact Us</a></p>
-        <p><a href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1" style="color:#ccc;" target="_blank" rel="noopener">Upload Documents</a></p>
+        <p><a href="index.html" style="color:#ccc;">Home</a></p>
+        <p><a href="about.html" style="color:#ccc;">About</a></p>
+        <p><a href="tips/index.html" style="color:#ccc;">Tips</a></p>
+        <p><a href="contact.html" style="color:#ccc;">Contact Us</a></p>
       </div>
       <div class="footer-section">
         <h4>Contact Info</h4>
