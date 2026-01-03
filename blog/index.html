@@ -1,19 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Resources — Precision Torque</title>
-  <meta name="description" content="Resources and guides on bookkeeping, notary, and vehicle paperwork from Precision Torque.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <link rel="stylesheet" href="/assets/styles.css">
+  <title>Resources | Precision Torque</title>
+  <meta name="description" content="Resources and guides on bookkeeping, mobile notary, and vehicle paperwork from Precision Torque." />
 
+  <!-- Social (optional but professional) -->
+  <meta property="og:title" content="Resources | Precision Torque" />
+  <meta property="og:description" content="Resources and guides on bookkeeping, mobile notary, and vehicle paperwork from Precision Torque." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts (match your main site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="alternate" type="application/rss+xml" title="Precision Torque RSS" href="/blog/rss.xml" />
+
+  <!-- Page-only polish for a clean, elegant Resources layout -->
   <style>
-    /* Small page-only tweaks */
-    .container{max-width:1100px}
-    h1{margin:8px 0 8px}
-    .post h3 a{color:#111}
-    .post h3 a:hover{color:var(--accent)}
+    /* Keep typography + spacing consistent with the rest of your site */
+    .page {
+      padding: 56px 0 72px;
+    }
+
+    .page .intro {
+      max-width: 72ch;
+      margin: 0;
+    }
+
+    /* Resource cards */
+    .resource-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .resource-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 18px;
+      align-items: start;
+
+      padding: 18px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.08);
+
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .resource-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.10);
+    }
+
+    .resource-thumb {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 14px;
+      background: rgba(0,0,0,.04);
+      display: block;
+    }
+
+    .resource-title {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .resource-title a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .resource-title a:hover {
+      color: var(--accent);
+    }
+
+    .resource-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+
+      font-size: 13px;
+      color: rgba(0,0,0,.65);
+      margin: 8px 0 10px;
+    }
+
+    .pill {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(0,0,0,.03);
+      color: rgba(0,0,0,.75);
+    }
+
+    .resource-excerpt {
+      margin: 0 0 14px;
+      color: rgba(0,0,0,.70);
+      max-width: 76ch;
+    }
+
+    /* Make "Read" feel refined (not a giant repeated CTA) */
+    .resource-actions .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+    }
+
+    /* CTA band spacing */
+    .cta-band {
+      margin-top: 26px;
+    }
+
+    @media (max-width: 860px) {
+      .resource-item {
+        grid-template-columns: 1fr;
+      }
+      .resource-thumb {
+        aspect-ratio: 16 / 9;
+      }
+    }
   </style>
 </head>
 
@@ -27,102 +144,151 @@
     </div>
 
     <nav aria-label="Main navigation">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../services.html">Services</a>
-      <a href="index.html">Resources</a>
-      <a href="../contact.html">Contact</a>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/blog/index.html" aria-current="page">Resources</a>
+      <a href="/contact.html">Contact</a>
     </nav>
 
-    <a href="../contact.html" class="cta">Book Now</a>
+    <!-- If this goes to Contact, consider renaming to "Message Me" site-wide -->
+    <a href="/contact.html" class="cta">Book Now</a>
   </header>
 
-  <main id="main-content" class="container">
-    <div class="kicker">Resources</div>
-    <h1>Resources, tips &amp; checklists</h1>
-    <p class="muted" style="margin:0; max-width: 80ch;">
-      Practical guidance to help small business owners and local clients with bookkeeping,
-      notary, and vehicle paperwork.
-    </p>
-
-    <section class="post-list" aria-live="polite">
-
-      <article class="post">
-        <img class="post-thumb" src="/assets/thumb-notary.svg" alt="Notary thumbnail">
-        <div>
-          <h3><a href="what-to-bring-notary.html">What to Bring to Your Mobile Notary Appointment</a></h3>
-          <div class="meta">Posted Dec 4, 2025 — Notary</div>
-          <p>Quick checklist and practical tips so your notary appointment goes smoothly.</p>
-          <a class="cta" href="what-to-bring-notary.html">Read</a>
-        </div>
-      </article>
-
-      <article class="post">
-        <img class="post-thumb" src="/assets/thumb-bookkeeping.svg" alt="Bookkeeping thumbnail">
-        <div>
-          <h3><a href="bookkeeping-tips.html">5 Quick Bookkeeping Tips for Small Business Owners</a></h3>
-          <div class="meta">Posted Dec 4, 2025 — Bookkeeping</div>
-          <p>Practical, easy-to-apply tips to keep your books organized and accurate.</p>
-          <a class="cta" href="bookkeeping-tips.html">Read</a>
-        </div>
-      </article>
-
-      <article class="post">
-        <img class="post-thumb" src="/assets/thumb-vehicle.svg" alt="Vehicle thumbnail">
-        <div>
-          <h3><a href="vehicle-registration-tips.html">Preparing for Vehicle Registration &amp; Title Transfer</a></h3>
-          <div class="meta">Posted Dec 4, 2025 — Vehicle Registration</div>
-          <p>Checklist and tips to avoid delays when registering or transferring title for your vehicle.</p>
-          <a class="cta" href="vehicle-registration-tips.html">Read</a>
-        </div>
-      </article>
-
-      <article class="post">
-        <img class="post-thumb" src="/assets/thumb-bookkeeping.svg" alt="Common bookkeeping mistakes thumbnail">
-        <div>
-          <h3><a href="common-bookkeeping-mistakes.html">Common Bookkeeping Mistakes (and how to fix them)</a></h3>
-          <div class="meta">Posted Dec 4, 2025 — Bookkeeping</div>
-          <p>Frequent bookkeeping errors business owners make and how to correct them.</p>
-          <a class="cta" href="common-bookkeeping-mistakes.html">Read</a>
-        </div>
-      </article>
-
-      <article class="post">
-        <img class="post-thumb" src="/assets/thumb-vehicle.svg" alt="DMV prep thumbnail">
-        <div>
-          <h3><a href="dmv-prep.html">How to Prepare for DMV Visits</a></h3>
-          <div class="meta">Posted Dec 4, 2025 — Vehicle Registration</div>
-          <p>Short checklist to help you avoid extra trips to the DMV and speed up your visit.</p>
-          <a class="cta" href="dmv-prep.html">Read</a>
-        </div>
-      </article>
-
-    </section>
-
-    <div class="cta-band" role="region" aria-label="Call to action">
-      <div>
-        <h3 style="margin:0;">Need help with your specific situation?</h3>
-        <p style="margin:4px 0 0; color: rgba(255,255,255,.90);">
-          Message me and I’ll point you to the right next step.
+  <main id="main-content">
+    <section class="page">
+      <div class="wrap">
+        <div class="kicker">Resources</div>
+        <h1>Resources, tips &amp; checklists</h1>
+        <p class="muted intro">
+          Practical guidance to help small business owners and local clients with bookkeeping,
+          notary, and vehicle paperwork.
         </p>
+
+        <section class="resource-list" aria-label="Resource articles">
+          <article class="resource-item">
+            <img class="resource-thumb" src="/assets/thumb-notary.svg" alt="Notary thumbnail" loading="lazy" />
+            <div>
+              <h3 class="resource-title">
+                <a href="/blog/what-to-bring-notary.html">What to Bring to Your Mobile Notary Appointment</a>
+              </h3>
+              <div class="resource-meta">
+                <span>Dec 4, 2025</span>
+                <span class="pill">Notary</span>
+              </div>
+              <p class="resource-excerpt">
+                Quick checklist and practical tips so your notary appointment goes smoothly.
+              </p>
+              <div class="resource-actions">
+                <a class="cta" href="/blog/what-to-bring-notary.html">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <img class="resource-thumb" src="/assets/thumb-bookkeeping.svg" alt="Bookkeeping thumbnail" loading="lazy" />
+            <div>
+              <h3 class="resource-title">
+                <a href="/blog/bookkeeping-tips.html">5 Quick Bookkeeping Tips for Small Business Owners</a>
+              </h3>
+              <div class="resource-meta">
+                <span>Dec 4, 2025</span>
+                <span class="pill">Bookkeeping</span>
+              </div>
+              <p class="resource-excerpt">
+                Practical, easy-to-apply tips to keep your books organized and accurate.
+              </p>
+              <div class="resource-actions">
+                <a class="cta" href="/blog/bookkeeping-tips.html">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <img class="resource-thumb" src="/assets/thumb-vehicle.svg" alt="Vehicle thumbnail" loading="lazy" />
+            <div>
+              <h3 class="resource-title">
+                <a href="/blog/vehicle-registration-tips.html">Preparing for Vehicle Registration &amp; Title Transfer</a>
+              </h3>
+              <div class="resource-meta">
+                <span>Dec 4, 2025</span>
+                <span class="pill">Vehicle Registration</span>
+              </div>
+              <p class="resource-excerpt">
+                Checklist and tips to avoid delays when registering or transferring title for your vehicle.
+              </p>
+              <div class="resource-actions">
+                <a class="cta" href="/blog/vehicle-registration-tips.html">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <img class="resource-thumb" src="/assets/thumb-bookkeeping.svg" alt="Common bookkeeping mistakes thumbnail" loading="lazy" />
+            <div>
+              <h3 class="resource-title">
+                <a href="/blog/common-bookkeeping-mistakes.html">Common Bookkeeping Mistakes (and how to fix them)</a>
+              </h3>
+              <div class="resource-meta">
+                <span>Dec 4, 2025</span>
+                <span class="pill">Bookkeeping</span>
+              </div>
+              <p class="resource-excerpt">
+                Frequent bookkeeping errors business owners make and how to correct them.
+              </p>
+              <div class="resource-actions">
+                <a class="cta" href="/blog/common-bookkeeping-mistakes.html">Read →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="resource-item">
+            <img class="resource-thumb" src="/assets/thumb-vehicle.svg" alt="DMV preparation thumbnail" loading="lazy" />
+            <div>
+              <h3 class="resource-title">
+                <a href="/blog/dmv-prep.html">How to Prepare for DMV Visits</a>
+              </h3>
+              <div class="resource-meta">
+                <span>Dec 4, 2025</span>
+                <span class="pill">Vehicle Registration</span>
+              </div>
+              <p class="resource-excerpt">
+                Short checklist to help you avoid extra trips to the DMV and speed up your visit.
+              </p>
+              <div class="resource-actions">
+                <a class="cta" href="/blog/dmv-prep.html">Read →</a>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <div class="cta-band" role="region" aria-label="Call to action">
+          <div>
+            <h3>Need help with your specific situation?</h3>
+            <p>Message me and I’ll point you to the right next step.</p>
+          </div>
+          <a class="cta" href="/contact.html">Contact</a>
+        </div>
       </div>
-      <a class="cta" href="../contact.html">Contact</a>
-    </div>
+    </section>
   </main>
 
   <footer>
     <div class="footer-content">
       <div class="footer-section">
         <h4>Precision Torque</h4>
-        <p style="color:#ddd">Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
+        <p style="color:#ddd">
+          Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.
+        </p>
       </div>
 
       <div class="footer-section">
         <h4>Quick Links</h4>
-        <p><a href="../index.html" style="color:#ccc;">Home</a></p>
-        <p><a href="../services.html" style="color:#ccc;">Services</a></p>
-        <p><a href="../contact.html" style="color:#ccc;">Contact</a></p>
-        <p><a href="rss.xml" style="color:#ccc;">RSS</a></p>
+        <p><a href="/index.html" style="color:#ccc;">Home</a></p>
+        <p><a href="/services.html" style="color:#ccc;">Services</a></p>
+        <p><a href="/blog/index.html" style="color:#ccc;">Resources</a></p>
+        <p><a href="/contact.html" style="color:#ccc;">Contact</a></p>
+        <p><a href="/blog/rss.xml" style="color:#ccc;">RSS</a></p>
       </div>
 
       <div class="footer-section">
