@@ -3,62 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bookkeeping Services | Precision Torque</title>
+  <title>Bookkeeping Services — Precision Torque</title>
   <meta name="description" content="Remote bookkeeping, QuickBooks cleanup, invoicing support, and monthly reporting for small businesses." />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237a1f2f;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%235e1722;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='98' fill='url(%23grad)' /%3E%3Cg transform='translate(100,70)'%3E%3Ccircle cx='0' cy='0' r='22' fill='none' stroke='%23fff' stroke-width='3' /%3E%3Cpath d='M -8,-8 L 8,8 M 8,-8 L -8,8' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' /%3E%3Crect x='-6' y='18' width='12' height='24' fill='%23fff' rx='2' /%3E%3C/g%3E%3Ctext x='100' y='145' font-size='28' font-weight='700' text-anchor='middle' fill='%23fff' font-family='Arial,sans-serif'%3EPRECISION TORQUE%3C/text%3E%3Ctext x='100' y='162' font-size='11' text-anchor='middle' fill='%23ddd' font-family='Arial,sans-serif'%3EProfessional Services%3C/text%3E%3C/svg%3E">
 
-<link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
-    /* Page-specific layout helpers */
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 44px 0; }
-    .kicker { color: var(--accent); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: 12px; }
-    .muted { color: #4b5563; }
-    .hero {
-      padding: 44px 0 28px;
-      background:
-        radial-gradient(1000px 280px at 20% 0%, rgba(122,31,47,.18), transparent 30%),
-        radial-gradient(900px 260px at 80% 10%, rgba(94,23,34,.14), transparent 30%),
-        linear-gradient(180deg, #f7f5f5 0%, #f2f2f2 100%);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    .hero-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap: 18px; align-items: center; }
-    .hero h1 { margin: 10px 0 10px; font-size: 38px; line-height: 1.1; }
-    .hero p { margin: 0; line-height: 1.75; }
-    .hero-card {
-      background:#fff;
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.06);
-    }
-    .hero-card ul { margin: 10px 0 0; padding-left: 18px; color:#374151; line-height:1.8; }
-    .btn-row { display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px; }
-    .cta.secondary {
-      background: transparent;
-      color: var(--accent);
-      border: 1px solid rgba(122,31,47,.35);
-    }
-    .cta.secondary:hover { background: rgba(122,31,47,.08); }
-
-    .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
-    .card {
-      background:#fff;
-      border-radius: 14px;
-      padding: 16px;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-    }
-    .card h3 { margin: 0 0 8px; font-size: 16px; }
-    .card p { margin: 0; color:#4b5563; line-height:1.65; font-size: 14px; }
-    .card ul { margin: 0; padding-left: 18px; color:#374151; line-height:1.8; }
-
-    .pricing-grid { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
-    .pricing-box h4 { margin:0 0 10px; font-size: 16px; }
-    .pricing-box .price { font-size: 22px; font-weight: 800; color:#111827; margin: 4px 0 10px; }
-    .pill {
+    /* Page-only pieces (keeps this page clean + consistent) */
+    .pill{
       display:inline-block;
       font-size: 12px;
       padding: 6px 10px;
@@ -69,7 +23,7 @@
       font-weight: 800;
       margin-bottom: 10px;
     }
-    .note {
+    .note{
       margin-top: 16px;
       border-left: 4px solid var(--accent);
       background: rgba(122,31,47,.06);
@@ -77,26 +31,25 @@
       border-radius: 12px;
       color:#111;
     }
-    .cta-band {
+    .pricing-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
       margin-top: 18px;
-      border-radius: 16px;
-      padding: 22px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-      color:#fff;
-      display:flex;
-      justify-content: space-between;
-      align-items:center;
-      flex-wrap:wrap;
-      gap: 12px;
     }
-    .cta-band .cta { background:#111; }
-    .cta-band .cta:hover { background:#000; }
+    .pricing-box h4 { margin:0 0 10px; font-size: 16px; }
+    .pricing-box .price { font-size: 22px; font-weight: 800; color:#111827; margin: 4px 0 10px; }
+
+    /* Make the secondary button match your new button system */
+    .cta.secondary{
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid rgba(122,31,47,.35);
+    }
+    .cta.secondary:hover{ background: rgba(122,31,47,.08); }
 
     @media (max-width: 980px){
-      .hero-grid { grid-template-columns: 1fr; }
-      .grid-2 { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 32px; }
+      .pricing-grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -109,15 +62,15 @@
       <h2>Precision Torque</h2>
       <div class="tagline">Trusted Local Bookkeeping &amp; Notary</div>
     </div>
+
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="bookkeeping.html">Bookkeeping</a>
-      <a href="notary.html">Mobile Notary</a>
-      <a href="vehicle.html">Vehicle Registration</a>
-      <a href="blog/index.html">Blog</a>
+      <a href="services.html">Services</a>
+      <a href="blog/index.html">Resources</a>
       <a href="contact.html">Contact</a>
     </nav>
+
     <a href="contact.html" class="cta">Book Now</a>
   </header>
 
@@ -128,22 +81,32 @@
         <div>
           <div class="kicker">Bookkeeping</div>
           <h1>Clean books. Clear reports. Zero stress.</h1>
-          <p class="muted" style="max-width: 70ch;">
+          <p>
             Remote bookkeeping for small businesses and individuals — including QuickBooks cleanup, reconciliations,
             invoicing support, and monthly reporting so you know exactly where your money is going.
           </p>
+
           <div class="btn-row">
             <a class="cta" href="bookkeeping-intake.html">Start Intake</a>
+            <a class="btn-ghost" href="services.html">← Back to Services</a>
             <a class="cta secondary" href="contact.html">Ask a Question</a>
           </div>
+
+          <div class="badge-row" style="margin-top:16px;">
+            <div class="badge">Monthly + Catch-up</div>
+            <div class="badge">QuickBooks Support</div>
+            <div class="badge">Free consultation</div>
+          </div>
+
           <p class="muted" style="margin-top: 10px; font-size: 13px;">
             ✅ Free consultation before all services.
           </p>
         </div>
 
-        <aside class="hero-card" aria-label="What you get">
-          <div class="pill">What you get</div>
-          <ul>
+        <aside class="hero-panel" aria-label="What you get">
+          <div class="kicker">What you get</div>
+          <h3 style="margin:10px 0 6px;">Included in most bookkeeping plans</h3>
+          <ul style="margin:0; padding-left:18px; color: rgba(255,255,255,.86); line-height:1.8;">
             <li>Accurate categorization + clean books</li>
             <li>Monthly bank reconciliation</li>
             <li>Easy-to-read monthly summaries</li>
@@ -154,7 +117,7 @@
       </div>
     </section>
 
-    <!-- OVERVIEW / WHO / PROCESS -->
+    <!-- HOW IT WORKS -->
     <section class="section">
       <div class="wrap">
         <h2 style="margin:0 0 8px;">How it works</h2>
@@ -162,18 +125,19 @@
           Simple steps, consistent communication, and clean deliverables.
         </p>
 
-        <div class="grid-2">
+        <div class="two">
           <div class="card">
             <h3>Process</h3>
-            <ul>
+            <ul style="margin:0; padding-left:18px; color:#374151; line-height:1.8;">
               <li>Send documents securely via email or cloud</li>
               <li>I process transactions and update your books</li>
               <li>You receive digital reports + next-step notes</li>
             </ul>
           </div>
+
           <div class="card">
             <h3>Great fit for</h3>
-            <ul>
+            <ul style="margin:0; padding-left:18px; color:#374151; line-height:1.8;">
               <li>Small business owners</li>
               <li>Self-employed &amp; gig workers</li>
               <li>Contractors &amp; service businesses</li>
@@ -201,8 +165,8 @@
           <div class="card pricing-box">
             <div class="pill">Starter</div>
             <h4>Starter Plan</h4>
-            <div class="price">$199<span style="font-size:14px; font-weight:700; color:#6b7280;">/month</span></div>
-            <ul>
+            <div class="price">$199 <span style="font-size:14px; font-weight:700; color:#6b7280;">/month</span></div>
+            <ul style="margin:0; padding-left:18px; color:#374151; line-height:1.8;">
               <li>Up to 75 transactions</li>
               <li>Income &amp; expense tracking</li>
               <li>Transaction categorization</li>
@@ -217,8 +181,8 @@
           <div class="card pricing-box">
             <div class="pill">Most Popular</div>
             <h4>Growth Plan</h4>
-            <div class="price">$349<span style="font-size:14px; font-weight:700; color:#6b7280;">/month</span></div>
-            <ul>
+            <div class="price">$349 <span style="font-size:14px; font-weight:700; color:#6b7280;">/month</span></div>
+            <ul style="margin:0; padding-left:18px; color:#374151; line-height:1.8;">
               <li>Up to 200 transactions</li>
               <li>Everything in Starter</li>
               <li>Invoicing support</li>
@@ -233,13 +197,13 @@
           <div class="card pricing-box">
             <div class="pill">One-time</div>
             <h4>Cleanup / Setup</h4>
-            <div class="price">$75<span style="font-size:14px; font-weight:700; color:#6b7280;">/hr</span></div>
+            <div class="price">$75 <span style="font-size:14px; font-weight:700; color:#6b7280;">/hr</span></div>
             <p class="muted" style="margin: 0 0 10px;">
               Perfect for messy or behind books.
             </p>
 
             <h4 style="margin-top:14px;">QuickBooks Setup</h4>
-            <div class="price">$175<span style="font-size:14px; font-weight:700; color:#6b7280;"> flat</span></div>
+            <div class="price">$175 <span style="font-size:14px; font-weight:700; color:#6b7280;">flat</span></div>
             <p class="muted" style="margin:0;">
               Includes chart of accounts and basic business setup.
             </p>
@@ -250,10 +214,12 @@
           </div>
         </div>
 
-        <div class="cta-band">
+        <div class="cta-band" role="region" aria-label="Call to action">
           <div>
             <h3 style="margin:0;">Not sure which plan fits?</h3>
-            <p style="margin:4px 0 0; color: rgba(255,255,255,.90);">Send a message and I’ll guide you to the right next step.</p>
+            <p style="margin:4px 0 0; color: rgba(255,255,255,.90);">
+              Send a message and I’ll guide you to the right next step.
+            </p>
           </div>
           <a class="cta" href="contact.html">Book Free Consultation</a>
         </div>
@@ -265,20 +231,24 @@
     <div class="footer-content">
       <div class="footer-section">
         <h4>Precision Torque</h4>
-        <p>Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
+        <p style="color:#ddd">Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
       </div>
+
       <div class="footer-section">
         <h4>Services</h4>
         <p><a href="bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
         <p><a href="notary.html" style="color:#ccc;">Mobile Notary</a></p>
         <p><a href="vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
       </div>
+
       <div class="footer-section">
         <h4>Quick Links</h4>
         <p><a href="index.html" style="color:#ccc;">Home</a></p>
-        <p><a href="contact.html" style="color:#ccc;">Contact Us</a></p>
-        <p><a href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1" style="color:#ccc;" target="_blank" rel="noopener">Upload Documents</a></p>
+        <p><a href="services.html" style="color:#ccc;">Services</a></p>
+        <p><a href="blog/index.html" style="color:#ccc;">Resources</a></p>
+        <p><a href="contact.html" style="color:#ccc;">Contact</a></p>
       </div>
+
       <div class="footer-section">
         <h4>Contact Info</h4>
         <p>👤 Destinee Montgomery</p>
@@ -287,6 +257,7 @@
         <p>📍 Joshua, TX &amp; Surrounding Areas</p>
       </div>
     </div>
+
     <div class="footer-bottom">
       &copy; 2025 Precision Torque — All Rights Reserved
     </div>
