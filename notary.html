@@ -8,6 +8,7 @@
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237a1f2f;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%235e1722;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='98' fill='url(%23grad)' /%3E%3Cg transform='translate(100,70)'%3E%3Ccircle cx='0' cy='0' r='22' fill='none' stroke='%23fff' stroke-width='3' /%3E%3Cpath d='M -8,-8 L 8,8 M 8,-8 L -8,8' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' /%3E%3Crect x='-6' y='18' width='12' height='24' fill='%23fff' rx='2' /%3E%3C/g%3E%3Ctext x='100' y='145' font-size='28' font-weight='700' text-anchor='middle' fill='%23fff' font-family='Arial,sans-serif'%3EPRECISION TORQUE%3C/text%3E%3Ctext x='100' y='162' font-size='11' text-anchor='middle' fill='%23ddd' font-family='Arial,sans-serif'%3EProfessional Services%3C/text%3E%3C/svg%3E">
 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
@@ -23,14 +24,20 @@
       font-weight: 800;
       margin-bottom: 10px;
     }
-    .note{
-      margin-top: 16px;
-      border-left: 4px solid var(--accent);
-      background: rgba(122,31,47,.06);
-      padding: 14px;
-      border-radius: 12px;
-      color:#111;
+
+    /* Two-column section grid (not in global CSS yet) */
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
     }
+    @media (max-width: 980px){
+      .two{ grid-template-columns: 1fr; }
+    }
+
+    .note{ margin-top: 16px; } /* global .note styles already exist */
+
     .pricing-grid{
       display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -60,16 +67,14 @@
       <h2>Precision Torque</h2>
       <div class="tagline">Trusted Local Bookkeeping &amp; Notary</div>
     </div>
-
     <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="blog/index.html">Resources</a>
-      <a href="contact.html">Contact</a>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/blog/index.html">Resources</a>
+      <a href="/contact.html">Contact</a>
     </nav>
-
-    <a href="contact.html" class="cta">Book Now</a>
+    <a href="/contact.html" class="cta">Book Now</a>
   </header>
 
   <main id="main-content">
@@ -85,8 +90,8 @@
           </p>
 
           <div class="btn-row">
-            <a class="cta" href="contact.html">Schedule Notary</a>
-            <a class="btn-ghost" href="services.html">← Back to Services</a>
+            <a class="cta" href="/contact.html">Schedule Notary</a>
+            <a class="btn-ghost" href="/services.html">← Back to Services</a>
             <a class="cta secondary" href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1" target="_blank" rel="noopener">Upload Docs</a>
           </div>
 
@@ -101,10 +106,11 @@
           </p>
         </div>
 
-        <aside class="hero-panel" aria-label="What to bring">
+        <!-- IMPORTANT: use hero-card on light hero -->
+        <aside class="hero-card" aria-label="What to bring">
           <div class="kicker">What to bring</div>
           <h3 style="margin:10px 0 6px;">For a smooth appointment</h3>
-          <ul style="margin:0; padding-left:18px; color: rgba(255,255,255,.86); line-height:1.8;">
+          <ul style="margin:0; padding-left:18px; color:#374151; line-height:1.8;">
             <li>Valid, unexpired photo ID</li>
             <li>Unsigned document(s) (sign with the notary present)</li>
             <li>Any required witnesses (if applicable)</li>
@@ -125,7 +131,7 @@
         <div class="two">
           <div class="card">
             <h3>Appointment steps</h3>
-            <ul style="margin:0; padding-left:18px; color:#374151; line-height:1.8;">
+            <ul>
               <li>Request an appointment (phone/email/contact form)</li>
               <li>Confirm document type, location, and time</li>
               <li>Meet on-site, verify ID, and notarize</li>
@@ -135,7 +141,7 @@
 
           <div class="card">
             <h3>Common notarizations</h3>
-            <ul style="margin:0; padding-left:18px; color:#374151; line-height:1.8;">
+            <ul>
               <li>Affidavits &amp; sworn statements</li>
               <li>Power of attorney</li>
               <li>Titles, bills of sale, and forms</li>
@@ -153,7 +159,7 @@
     </section>
 
     <!-- PRICING -->
-    <section class="section" style="background:#f2f2f2;">
+    <section class="section" style="background: var(--surface-muted);">
       <div class="wrap">
         <div class="kicker">Pricing</div>
         <h2 style="margin:8px 0 8px;">Simple, transparent notary pricing</h2>
@@ -191,7 +197,7 @@
               Send a message and I’ll confirm availability and pricing.
             </p>
           </div>
-          <a class="cta" href="contact.html">Book Notary</a>
+          <a class="cta" href="/contact.html">Book Notary</a>
         </div>
       </div>
     </section>
@@ -206,17 +212,17 @@
 
       <div class="footer-section">
         <h4>Services</h4>
-        <p><a href="bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
-        <p><a href="notary.html" style="color:#ccc;">Mobile Notary</a></p>
-        <p><a href="vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
+        <p><a href="/bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
+        <p><a href="/notary.html" style="color:#ccc;">Mobile Notary</a></p>
+        <p><a href="/vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
       </div>
 
       <div class="footer-section">
         <h4>Quick Links</h4>
-        <p><a href="index.html" style="color:#ccc;">Home</a></p>
-        <p><a href="services.html" style="color:#ccc;">Services</a></p>
-        <p><a href="blog/index.html" style="color:#ccc;">Resources</a></p>
-        <p><a href="contact.html" style="color:#ccc;">Contact</a></p>
+        <p><a href="/index.html" style="color:#ccc;">Home</a></p>
+        <p><a href="/services.html" style="color:#ccc;">Services</a></p>
+        <p><a href="/blog/index.html" style="color:#ccc;">Resources</a></p>
+        <p><a href="/contact.html" style="color:#ccc;">Contact</a></p>
       </div>
 
       <div class="footer-section">
