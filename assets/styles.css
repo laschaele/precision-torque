@@ -160,6 +160,7 @@ nav a{
 nav a:hover{ color: var(--accent); opacity: 1; }
 nav a[aria-current="page"]{ color: var(--accent); opacity: 1; position: relative; }
 nav a[aria-current="page"]::after{ content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background: var(--accent); border-radius:999px; }
+.nav-cta{ margin-left: 4px; }
 
 /* ---------- Buttons ---------- */
 .cta,
@@ -334,6 +335,14 @@ nav a[aria-current="page"]::after{ content:""; position:absolute; left:0; right:
     linear-gradient(180deg, #0f0f10 0%, #151517 55%, #1b1b1e 100%);
   color:#fff;
   border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+/* Home-only brightness tweak for hero; keeps global brand palette unchanged */
+body.page-home .hero--dark{
+  background:
+    radial-gradient(1200px 380px at 20% 0%, rgba(122,31,47,.22), transparent 60%),
+    radial-gradient(900px 360px at 80% 10%, rgba(94,23,34,.20), transparent 60%),
+    linear-gradient(180deg, #1a1418 0%, #21171d 55%, #271b22 100%);
 }
 
 .hero--dark .kicker{ color: rgba(255,255,255,.85); }
