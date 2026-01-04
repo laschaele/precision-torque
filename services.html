@@ -7,79 +7,6 @@
   <meta name="description" content="Explore Precision Torque services: bookkeeping, mobile notary, and vehicle registration support in Joshua, TX." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
-
-  <style>
-    /* Page-only: make whole service cards clickable + clean hover */
-    .service-grid { margin-top: 22px; }
-
-    .service-card{
-      position: relative;
-      padding: 18px;
-      border-radius: 14px;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.06);
-      background:#fff;
-      overflow: hidden;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      min-height: 230px;
-    }
-
-    /* Full-card clickable overlay (no nested anchor problems) */
-    .service-card .card-link{
-      position:absolute;
-      inset:0;
-      z-index:1;
-      border-radius: 14px;
-      text-indent:-9999px;
-      overflow:hidden;
-    }
-
-    /* Keep real content clickable above overlay */
-    .service-card > *:not(.card-link){
-      position: relative;
-      z-index: 2;
-    }
-
-    .service-card:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(0,0,0,0.10);
-      border-color: rgba(122,31,47,0.22);
-    }
-
-    .service-card:focus-within{
-      outline: 3px solid rgba(122,31,47,0.22);
-      outline-offset: 3px;
-    }
-
-    .service-card p{ margin:0; color:#4b5563; line-height:1.65; }
-
-    /* Make hero panel readable on light hero */
-    .hero-panel{
-      color: #111827;
-    }
-
-    .hero-panel p{
-      color: #4b5563;
-    }
-
-    .hero-panel ul{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: #4b5563;
-      line-height: 1.8;
-    }
-
-    .hero-panel li{
-      color: #374151;
-    }
-
-    /* Responsive help if needed */
-    @media (max-width: 980px){
-      .service-card{ min-height: unset; }
-    }
-  </style>
 </head>
 
 <body>
@@ -104,12 +31,12 @@
 
   <main id="main-content">
     <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
+    <section class="page-hero">
+      <div class="wrap page-head">
+        <div class="stack-lg">
           <div class="kicker">Services</div>
           <h1>Choose the support you need.</h1>
-          <p style="max-width:80ch;">
+          <p class="lede">
             Click a service for details, pricing guidance, and next steps.
           </p>
 
@@ -125,15 +52,14 @@
           </div>
         </div>
 
-        <!-- Use hero-panel so it matches your new site look -->
-        <aside class="hero-panel" aria-label="What to expect">
+        <aside class="page-panel" aria-label="What to expect">
           <div class="kicker">What to expect</div>
-          <h3 style="margin:10px 0 6px;">Simple, clear service</h3>
-          <p class="muted" style="margin:0 0 10px;">
+          <h3>Simple, clear service</h3>
+          <p class="muted">
             Expect a quick follow-up with clear steps so you know exactly how we’ll help and what to
             prepare.
           </p>
-          <ul>
+          <ul class="list-muted">
             <li>Brief questions to confirm your goals and timeline</li>
             <li>A straightforward quote or plan before any work begins</li>
             <li>Guidance on documents or details to have ready</li>
@@ -146,21 +72,23 @@
     <!-- SERVICE MENU -->
     <section class="section">
       <div class="wrap">
-        <div class="kicker">Service Menu</div>
-        <h2 style="margin:8px 0 8px;">Core services</h2>
-        <p class="muted" style="margin:0; max-width: 80ch;">
-          These pages are intentionally not in the top navigation—just click what you need and you’ll
-          see pricing guidance, what’s included, and how to get started.
-        </p>
+        <div class="section-header">
+          <div class="kicker">Service Menu</div>
+          <h2>Core services</h2>
+          <p class="section-intro">
+            These pages are intentionally not in the top navigation—just click what you need and you’ll
+            see pricing guidance, what’s included, and how to get started.
+          </p>
+        </div>
 
         <div class="service-grid">
           <!-- BOOKKEEPING -->
           <article class="service-card">
             <a class="card-link" href="/bookkeeping.html">Bookkeeping</a>
-            <h3 style="margin:0;">📘 Bookkeeping</h3>
+            <h3>📘 Bookkeeping</h3>
             <p>Monthly bookkeeping, cleanup/catch-up, reconciliations, invoicing support, and QuickBooks setup.</p>
 
-            <div class="btn-row" style="margin-top:auto;">
+            <div class="btn-row">
               <a class="cta" href="/bookkeeping.html">Learn More</a>
               <a class="btn-ghost" href="/bookkeeping-intake.html">Start Intake</a>
             </div>
@@ -169,10 +97,10 @@
           <!-- NOTARY -->
           <article class="service-card">
             <a class="card-link" href="/notary.html">Mobile Notary</a>
-            <h3 style="margin:0;">🖊️ Mobile Notary</h3>
+            <h3>🖊️ Mobile Notary</h3>
             <p>Convenient mobile notary service with straightforward scheduling and clear pricing.</p>
 
-            <div class="btn-row" style="margin-top:auto;">
+            <div class="btn-row">
               <a class="cta" href="/notary.html">Learn More</a>
               <a class="btn-ghost" href="/contact.html">Request Appointment</a>
             </div>
@@ -181,10 +109,10 @@
           <!-- VEHICLE -->
           <article class="service-card">
             <a class="card-link" href="/vehicle.html">Vehicle Registration</a>
-            <h3 style="margin:0;">🚗 Vehicle Registration</h3>
+            <h3>🚗 Vehicle Registration</h3>
             <p>Help with vehicle paperwork and registration support to reduce stress and save time.</p>
 
-            <div class="btn-row" style="margin-top:auto;">
+            <div class="btn-row">
               <a class="cta" href="/vehicle.html">Learn More</a>
               <a class="btn-ghost" href="/contact.html">Ask a Question</a>
             </div>
@@ -208,29 +136,29 @@
     <div class="footer-content">
       <div class="footer-section">
         <h4>Precision Torque</h4>
-        <p style="color:#ddd">Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
+        <p>Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
       </div>
 
       <div class="footer-section">
         <h4>Services</h4>
-        <p><a href="/bookkeeping.html" style="color:#ccc;">Bookkeeping</a></p>
-        <p><a href="/notary.html" style="color:#ccc;">Mobile Notary</a></p>
-        <p><a href="/vehicle.html" style="color:#ccc;">Vehicle Registration</a></p>
+        <p><a href="/bookkeeping.html">Bookkeeping</a></p>
+        <p><a href="/notary.html">Mobile Notary</a></p>
+        <p><a href="/vehicle.html">Vehicle Registration</a></p>
       </div>
 
       <div class="footer-section">
         <h4>Quick Links</h4>
-        <p><a href="/index.html" style="color:#ccc;">Home</a></p>
-        <p><a href="/about.html" style="color:#ccc;">About</a></p>
-        <p><a href="/blog/index.html" style="color:#ccc;">Resources</a></p>
-        <p><a href="/contact.html" style="color:#ccc;">Contact Us</a></p>
+        <p><a href="/index.html">Home</a></p>
+        <p><a href="/about.html">About</a></p>
+        <p><a href="/blog/index.html">Resources</a></p>
+        <p><a href="/contact.html">Contact Us</a></p>
       </div>
 
       <div class="footer-section">
         <h4>Contact Info</h4>
         <p>👤 Destinee Montgomery</p>
-        <p>📱 <a href="tel:+16825297128" style="color:#ccc;">(682) 529-7128</a></p>
-        <p>✉️ <a href="mailto:support@destineemontgomery.com" style="color:#ccc;">support@destineemontgomery.com</a></p>
+        <p>📱 <a href="tel:+16825297128">(682) 529-7128</a></p>
+        <p>✉️ <a href="mailto:support@destineemontgomery.com">support@destineemontgomery.com</a></p>
         <p>📍 Joshua, TX &amp; Surrounding Areas</p>
       </div>
     </div>
