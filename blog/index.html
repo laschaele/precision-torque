@@ -20,19 +20,56 @@
 
   <!-- Page polish -->
   <style>
+    .hero-grid {
+      align-items: center;
+      gap: 28px;
+    }
+
+    .hero-panel {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+      padding: 20px 22px;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
+    }
+
+    .hero-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      padding: 0;
+      margin: 18px 0 0;
+      list-style: none;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      line-height: 1.5;
+    }
+
+    .hero-list li::before {
+      content: "✓";
+      font-weight: 700;
+      color: #f7d046;
+      margin-top: 2px;
+    }
+
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 26px;
+      margin-top: 28px;
     }
 
     .blog-card {
       background: #fff;
-      border-radius: 14px;
-      padding: 20px;
+      border-radius: 16px;
+      padding: 22px;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
-      border: 1px solid rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.06);
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -40,8 +77,8 @@
     }
 
     .blog-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
     }
 
     .post-meta {
@@ -51,6 +88,7 @@
       color: #5a6473;
       font-size: 0.95rem;
       margin: 0;
+      align-items: center;
     }
 
     .pill {
@@ -75,15 +113,40 @@
     }
 
     .post-title {
-      margin: 2px 0 4px;
-      font-size: 1.2rem;
-      line-height: 1.4;
+      margin: 4px 0 6px;
+      font-size: 1.25rem;
+      line-height: 1.45;
     }
 
     .post-excerpt {
       margin: 0;
+      color: #3f4856;
+      line-height: 1.65;
+    }
+
+    .learn-wrap {
+      background: #f7f8fa;
+      border: 1px solid #e6e8ee;
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .learn-label {
+      margin: 0 0 6px;
+      font-weight: 700;
+      color: #303643;
+      letter-spacing: 0.01em;
+    }
+
+    .learn-list {
+      margin: 0;
+      padding-left: 18px;
       color: #4a5561;
-      line-height: 1.6;
+      line-height: 1.55;
+    }
+
+    .learn-list li + li {
+      margin-top: 4px;
     }
 
     .post-footer {
@@ -97,7 +160,7 @@
 
     .post-footer .cta {
       padding: 10px 14px;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 0.95rem;
     }
 
@@ -108,9 +171,10 @@
     }
 
     .blog-intro {
-      max-width: 74ch;
+      max-width: 70ch;
       color: #3e4551;
       line-height: 1.7;
+      margin-bottom: 6px;
     }
   </style>
 </head>
@@ -143,14 +207,20 @@
     <section class="hero hero--dark">
       <div class="wrap hero-grid">
         <div>
-          <div class="kicker">Resources</div>
+          <div class="kicker">Resource Library</div>
           <h1>Guides to save you time on paperwork.</h1>
           <p>
-            Practical tips for bookkeeping, mobile notarization, and vehicle registration so you can
-            move forward with confidence.
+            Clear checklists and quick wins for bookkeeping, mobile notarization, and vehicle
+            registration—written so you know exactly what to do next.
           </p>
 
-          <div class="btn-row">
+          <ul class="hero-list">
+            <li>Fast prep for appointments, renewals, and filings.</li>
+            <li>Plain-language steps that match how real visits work.</li>
+            <li>Tips you can act on today to avoid repeat trips.</li>
+          </ul>
+
+          <div class="btn-row" style="margin-top:16px;">
             <a class="cta" href="/book.html">Book Now</a>
             <a class="btn-ghost" href="/services.html">See Services</a>
           </div>
@@ -159,9 +229,9 @@
         <aside class="hero-panel" aria-label="Featured resource">
           <div class="kicker">Featured</div>
           <h3 style="margin:10px 0 6px;">Quick prep before your notary visit</h3>
-          <p style="margin:0 0 12px; color: rgba(255,255,255,.86); line-height:1.6;">
+          <p style="margin:0 0 14px; color: rgba(255,255,255,.88); line-height:1.6;">
             Bring the right ID, documents, and witnesses so your notarization goes smoothly on the
-            first try.
+            first try. A quick read that saves a second trip.
           </p>
           <a class="cta" href="/blog/what-to-bring-notary.html">Read the checklist</a>
         </aside>
@@ -178,6 +248,10 @@
           registration. Each post is written to help you prep faster, avoid repeat trips, and feel more
           confident with every form you sign.
         </p>
+        <p class="blog-intro" style="color:#5b6474;">
+          Choose a topic to get concise steps, checklists, and timelines tailored to busy small-business
+          owners and families.
+        </p>
 
         <div class="blog-grid" role="list">
           <article class="blog-card" role="listitem">
@@ -186,7 +260,18 @@
               <time datetime="2024-11-02">Nov 2, 2024</time>
             </div>
             <h3 class="post-title">What to Bring to a Notary</h3>
-            <p class="post-excerpt">Everything you need for a smooth appointment.</p>
+            <p class="post-excerpt">
+              A pre-appointment checklist that keeps your notarization on track, whether it's for real
+              estate, school forms, or business documents.
+            </p>
+            <div class="learn-wrap">
+              <p class="learn-label">You’ll learn:</p>
+              <ul class="learn-list">
+                <li>Which IDs and originals to pack for each document type</li>
+                <li>How to handle witnesses, copies, and signatures in advance</li>
+                <li>Quick etiquette to help the notary verify you faster</li>
+              </ul>
+            </div>
             <div class="post-footer">
               <a class="cta" href="/blog/what-to-bring-notary.html">Read More</a>
               <p class="post-footnote">5-minute prep checklist</p>
@@ -199,7 +284,18 @@
               <time datetime="2025-01-10">Jan 10, 2025</time>
             </div>
             <h3 class="post-title">Bookkeeping Tips</h3>
-            <p class="post-excerpt">Simple habits to keep your books clean each month.</p>
+            <p class="post-excerpt">
+              Monthly routines that keep your books clean without stealing your weekend, perfect for
+              solopreneurs and growing teams alike.
+            </p>
+            <div class="learn-wrap">
+              <p class="learn-label">You’ll learn:</p>
+              <ul class="learn-list">
+                <li>Weekly checkpoints that prevent month-end scrambles</li>
+                <li>How to tag expenses so reports make sense at tax time</li>
+                <li>Simple reconciliation steps you can finish in 15 minutes</li>
+              </ul>
+            </div>
             <div class="post-footer">
               <a class="cta" href="/blog/bookkeeping-tips.html">Read More</a>
               <p class="post-footnote">Checklists + sample entries</p>
@@ -212,7 +308,18 @@
               <time datetime="2024-12-05">Dec 5, 2024</time>
             </div>
             <h3 class="post-title">Common Bookkeeping Mistakes</h3>
-            <p class="post-excerpt">Catch issues early to avoid headaches at tax time.</p>
+            <p class="post-excerpt">
+              Spot the traps that lead to messy ledgers and surprise tax bills, with fixes you can apply
+              before your accountant flags them.
+            </p>
+            <div class="learn-wrap">
+              <p class="learn-label">You’ll learn:</p>
+              <ul class="learn-list">
+                <li>How to separate personal and business spending cleanly</li>
+                <li>Red flags that signal missing receipts or misclassifications</li>
+                <li>Simple review routines to keep audits stress-free</li>
+              </ul>
+            </div>
             <div class="post-footer">
               <a class="cta" href="/blog/common-bookkeeping-mistakes.html">Read More</a>
               <p class="post-footnote">Red flags to watch</p>
@@ -225,7 +332,18 @@
               <time datetime="2024-09-18">Sep 18, 2024</time>
             </div>
             <h3 class="post-title">Vehicle Registration Tips</h3>
-            <p class="post-excerpt">Stay organized and avoid repeat trips for paperwork.</p>
+            <p class="post-excerpt">
+              From renewals to ownership changes, this guide covers the paperwork order, payment
+              expectations, and timing to keep your plates current.
+            </p>
+            <div class="learn-wrap">
+              <p class="learn-label">You’ll learn:</p>
+              <ul class="learn-list">
+                <li>What to gather for renewals, transfers, and out-of-state moves</li>
+                <li>How to schedule around inspections and proof-of-insurance rules</li>
+                <li>Tips to avoid penalties and mailed-back applications</li>
+              </ul>
+            </div>
             <div class="post-footer">
               <a class="cta" href="/blog/vehicle-registration-tips.html">Read More</a>
               <p class="post-footnote">Docs + timing guidance</p>
@@ -238,7 +356,18 @@
               <time datetime="2024-08-07">Aug 7, 2024</time>
             </div>
             <h3 class="post-title">DMV Prep</h3>
-            <p class="post-excerpt">Prepare documents and timing for a faster visit.</p>
+            <p class="post-excerpt">
+              A before-you-go rundown so your DMV visit is predictable, including backups to bring and
+              how to double-check your forms.
+            </p>
+            <div class="learn-wrap">
+              <p class="learn-label">You’ll learn:</p>
+              <ul class="learn-list">
+                <li>How to organize titles, proofs, and payment in the right order</li>
+                <li>When to book appointments versus walking in for faster service</li>
+                <li>On-the-spot checks that prevent rejected submissions</li>
+              </ul>
+            </div>
             <div class="post-footer">
               <a class="cta" href="/blog/dmv-prep.html">Read More</a>
               <p class="post-footnote">Skip extra lines</p>
