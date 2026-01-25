@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGHP4YD769"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BGHP4YD769');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Admin & Document Cleanup | Remote Support</title>
+  <meta name="description" content="Business admin & document cleanup—forms, inbox chaos, folders, backlogs, and document organization. Confidential, judgment-free, remote support." />
+
+  <!-- Different (clean) favicon so it doesn't feel like your original site -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231d4ed8'/%3E%3Cstop offset='100%25' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='10' y='10' width='180' height='180' rx='44' fill='url(%23g)'/%3E%3Cpath d='M68 118c0-25 18-42 42-42s42 17 42 42c0 25-18 42-42 42s-42-17-42-42Z' fill='rgba(255,255,255,.18)'/%3E%3Cpath d='M80 118c0-18 13-30 30-30s30 12 30 30-13 30-30 30-30-12-30-30Z' fill='white'/%3E%3C/svg%3E" />
+
+  <!-- Font (different from your Montserrat brand) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Structured data (keeps your business identity without your old design) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Precision Torque",
+    "telephone": "+16825297128",
+    "email": "support@destineemontgomery.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Joshua",
+      "addressRegion": "TX"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      /* Sleek, professional, NOT your burgundy brand */
+      --bg0:#fbfcfe;
+      --bg1:#f3f6ff;
+      --ink:#0b1220;
+      --muted: rgba(11,18,32,.70);
+      --muted2: rgba(11,18,32,.55);
+
+      --card: rgba(255,255,255,.78);
+      --card2: rgba(255,255,255,.92);
+      --stroke: rgba(11,18,32,.10);
+
+      --accent:#1d4ed8;   /* sapphire */
+      --accent2:#0ea5e9;  /* sky */
+      --ok:#10b981;       /* mint */
+
+      --shadow: 0 18px 55px rgba(2, 6, 23, .10);
+      --shadow2: 0 12px 30px rgba(2, 6, 23, .08);
+
+      --r: 18px;
+      --r2: 26px;
+      --max: 1100px;
+
+      --tap: 44px; /* minimum tap target */
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 520px at 18% 0%, rgba(29,78,216,.14), transparent 60%),
+        radial-gradient(900px 520px at 82% 6%, rgba(14,165,233,.12), transparent 62%),
+        radial-gradient(900px 520px at 50% 100%, rgba(16,185,129,.10), transparent 65%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      line-height: 1.55;
+    }
+
+    a{ color: inherit; text-decoration:none; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 26px 18px 78px; }
+
+    /* Accessible skip link */
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:18px;
+      top:18px;
+      width:auto;
+      height:auto;
+      padding:10px 12px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow2);
+      z-index: 9999;
+    }
+
+    /* Top bar */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 8px 2px 18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .mark{
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      flex: 0 0 auto;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: 1px solid rgba(255,255,255,.55);
+      box-shadow: 0 14px 34px rgba(29,78,216,.18);
+    }
+    .brandText{ min-width:0; }
+    .brandText strong{
+      display:block;
+      font-size: 14px;
+      letter-spacing: .2px;
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+    }
+    .brandText span{
+      display:block;
+      font-size: 12.5px;
+      color: var(--muted2);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content:flex-end;
+    }
+    .chip{
+      font-size: 13px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.70);
+      box-shadow: 0 10px 18px rgba(2,6,23,.05);
+      transition: transform .12s ease, filter .12s ease;
+      white-space: nowrap;
+      color: rgba(11,18,32,.86);
+      min-height: var(--tap);
+      display:inline-flex;
+      align-items:center;
+    }
+    .chip:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+
+    /* Hero */
+    .hero{
+      border-radius: var(--r2);
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(560px 260px at 18% 10%, rgba(29,78,216,.18), transparent 62%),
+        radial-gradient(560px 260px at 86% 18%, rgba(14,165,233,.14), transparent 62%);
+      pointer-events:none;
+    }
+
+    .heroInner{
+      position:relative;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      padding: 32px 26px;
+      align-items: stretch;
+    }
+    @media (max-width: 940px){
+      .heroInner{ grid-template-columns: 1fr; padding: 26px 18px; }
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size: 12.5px;
+      color: rgba(11,18,32,.74);
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(11,18,32,.10);
+      padding: 8px 12px;
+      border-radius: 999px;
+      width: fit-content;
+      margin-bottom: 12px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:50%;
+      background: var(--ok);
+      box-shadow: 0 0 0 4px rgba(16,185,129,.14);
+    }
+
+    h1{
+      margin: 0 0 12px;
+      font-size: clamp(28px, 3.3vw, 48px);
+      line-height: 1.12;
+      letter-spacing: -.6px;
+      color: rgba(11,18,32,.96);
+    }
+    .lede{
+      margin: 0 0 14px;
+      font-size: clamp(15.5px, 1.2vw, 17px);
+      color: var(--muted);
+      max-width: 64ch;
+    }
+
+    .btnRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 13px 16px;
+      border-radius: 14px;
+      font-weight: 700;
+      border: 1px solid rgba(2,6,23,.10);
+      transition: transform .12s ease, filter .12s ease;
+      cursor:pointer;
+      user-select:none;
+      text-decoration:none;
+      min-height: var(--tap);
+    }
+    .btnPrimary{
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-color: rgba(29,78,216,.25);
+      box-shadow: 0 14px 28px rgba(29,78,216,.14);
+    }
+    .btnPrimary:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+    .btnGhost{
+      background: rgba(255,255,255,.72);
+      color: rgba(11,18,32,.88);
+    }
+    .btnGhost:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+
+    @media (max-width: 520px){
+      .btn{ width: 100%; }
+      .btnRow{ gap:10px; }
+    }
+
+    .fine{
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--muted2);
+    }
+
+    /* Side panel */
+    .panel{
+      background: var(--card2);
+      border: 1px solid var(--stroke);
+      border-radius: var(--r);
+      box-shadow: var(--shadow2);
+      padding: 18px;
+      height: 100%;
+    }
+    .panel h2{
+      margin: 0 0 8px;
+      font-size: 1.06rem;
+      letter-spacing: .1px;
+      color: rgba(11,18,32,.92);
+    }
+    .panel p{ margin: 0 0 12px; color: var(--muted); }
+    .list{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(11,18,32,.86);
+    }
+    .list li{ margin: 10px 0; }
+    .badges{
+      display:flex;
+      gap: 8px;
+      flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    .badge{
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(29,78,216,.08);
+      border: 1px solid rgba(29,78,216,.14);
+      color: rgba(11,18,32,.78);
+    }
+
+    /* Quick benefits */
+    .grid3{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    @media (max-width: 940px){
+      .grid3{ grid-template-columns: 1fr; }
+    }
+    .card{
+      background: rgba(255,255,255,.78);
+      border: 1px solid var(--stroke);
+      border-radius: var(--r);
+      box-shadow: var(--shadow2);
+      padding: 18px;
+    }
+    .card strong{ display:block; margin-bottom: 6px; }
+    .card span{ color: var(--muted); }
+
+    /* Sections */
+    .section{
+      margin-top: 18px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid var(--stroke);
+      border-radius: var(--r2);
+      box-shadow: var(--shadow2);
+      padding: 22px;
+    }
+    .section h3{
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+      letter-spacing: .1px;
+      color: rgba(11,18,32,.94);
+    }
+    .section p{ margin: 0 0 10px; color: var(--muted); }
+
+    /* Upload block */
+    .uploadBox{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(11,18,32,.10);
+      background: rgba(255,255,255,.86);
+      margin-top: 12px;
+    }
+    @media (max-width: 720px){
+      .uploadBox{ flex-direction: column; }
+    }
+    .uploadBox strong{ display:block; margin-bottom: 6px; }
+    .tiny{ font-size: 12.5px; color: var(--muted2); }
+    .link{
+      color: rgba(29,78,216,.92);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 650;
+    }
+
+    /* Contact form (uses your existing formsubmit action) */
+    form{
+      margin-top: 12px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 760px){
+      form{ grid-template-columns: 1fr; }
+    }
+    label{
+      display:block;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(11,18,32,.72);
+      margin-bottom: 6px;
+      letter-spacing: .1px;
+    }
+    input, select, textarea{
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(11,18,32,.14);
+      background: rgba(255,255,255,.92);
+      color: rgba(11,18,32,.92);
+      outline: none;
+      font-size: 14.5px;
+      min-height: var(--tap);
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(29,78,216,.35);
+      box-shadow: 0 0 0 4px rgba(29,78,216,.14);
+    }
+    textarea{
+      min-height: 140px;
+      resize: vertical;
+      grid-column: 1 / -1;
+    }
+    .full{ grid-column: 1 / -1; }
+    .actions{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      flex-wrap:wrap;
+      grid-column: 1 / -1;
+      margin-top: 4px;
+    }
+
+    /* FAQ */
+    details{
+      border: 1px solid rgba(11,18,32,.10);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(255,255,255,.86);
+      margin: 10px 0;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 700;
+      color: rgba(11,18,32,.88);
+      outline: none;
+    }
+    .ans{ margin-top: 8px; color: var(--muted); }
+
+    footer{
+      margin-top: 18px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color: var(--muted2);
+      font-size: 13px;
+      padding: 10px 2px 0;
+    }
+
+    /* Smooth anchors */
+    html{ scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      *{ transition:none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="wrap" id="main-content">
+
+    <!-- Top bar -->
+    <div class="topbar">
+      <div class="brand" aria-label="Landing brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="brandText">
+          <strong>Admin & Document Cleanup</strong>
+          <span>Remote support • confidential • judgment-free</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Landing navigation">
+        <a class="chip" href="#contact">Contact</a>
+        <a class="chip" href="#upload">Secure Upload</a>
+        <a class="chip" href="#faq">FAQ</a>
+      </nav>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="heroInner">
+        <div>
+          <div class="kicker"><span class="dot" aria-hidden="true"></span>Clear systems • calm communication</div>
+
+          <h1>Paperwork and admin chaos stops here.</h1>
+
+          <p class="lede">
+            I help small business owners clean up documents, forms, inbox backlogs, and “I’ll deal with it later” admin.
+            We start with one focused chunk, finish it, and you get a simple system you can keep up with.
+          </p>
+
+          <div class="btnRow">
+            <a class="btn btnPrimary" href="#contact">Message me</a>
+            <a class="btn btnGhost" href="#upload">Secure upload</a>
+          </div>
+
+          <div class="fine">
+            No phone calls required. Quick reply. Upload only after we confirm what you should send.
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="What I handle">
+          <h2>What I can handle</h2>
+          <p>Pick one to start — we keep it contained and finish it.</p>
+          <ul class="list">
+            <li>Document organization (folders, naming, cleanup)</li>
+            <li>Forms & letters (prepared, checked, ready)</li>
+            <li>Inbox cleanup + follow-up tracking</li>
+            <li>Backlog triage: what matters first</li>
+            <li>Bookkeeping document prep (statements/receipts ready)</li>
+          </ul>
+          <div class="badges" aria-label="Badges">
+            <span class="badge">Professional</span>
+            <span class="badge">Confidential</span>
+            <span class="badge">Mobile-friendly process</span>
+          </div>
+
+          <div style="margin-top:14px;">
+            <div class="tiny">Direct contact:</div>
+            <div style="margin-top:6px; color: rgba(11,18,32,.86); line-height:1.8;">
+              Phone: <a class="link" href="tel:+16825297128">(682) 529-7128</a><br>
+              Email: <a class="link" href="mailto:support@destineemontgomery.com">support@destineemontgomery.com</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <div class="grid3" aria-label="Benefits">
+      <div class="card">
+        <strong>Fast clarity</strong>
+        <span>We reduce chaos first, then build a simple system you can maintain.</span>
+      </div>
+      <div class="card">
+        <strong>Low-stress process</strong>
+        <span>Clear steps, minimal meetings, and clean communication.</span>
+      </div>
+      <div class="card">
+        <strong>Finish what’s stuck</strong>
+        <span>One focused chunk at a time so you actually get momentum.</span>
+      </div>
+    </div>
+
+    <!-- Upload -->
+    <section id="upload" class="section" aria-label="Secure Upload">
+      <h3>Secure document upload</h3>
+      <p>Only upload after I confirm scope so you don’t send the wrong items.</p>
+
+      <div class="uploadBox">
+        <div>
+          <strong>Dropbox secure upload</strong>
+          <div class="tiny">Uploads open in a new tab for security.</div>
+        </div>
+
+        <a class="btn btnPrimary"
+           href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1"
+           target="_blank"
+           rel="noopener">
+          Upload securely
+        </a>
+      </div>
+
+      <p class="tiny" style="margin-top:10px;">
+        Tip: If you’re unsure what to upload, message first — I’ll tell you exactly what I need.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section" aria-label="Contact">
+      <h3>Send a message</h3>
+      <p>Tell me what’s messy and what outcome you want. I’ll reply with scope + next steps.</p>
+
+      <!-- Uses your existing FormSubmit endpoint from your contact.html -->
+      <form action="https://formsubmit.co/ed912b0d3f3cf60ed97bb00e481f13ef" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Admin & Document Cleanup Inquiry (Landing Page)">
+        <!-- Honeypot (anti-spam) -->
+        <input type="text" name="_honey" style="display:none">
+
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+
+        <div>
+          <label for="service">What needs cleanup?</label>
+          <select id="service" name="service" required>
+            <option value="" selected disabled>Select one</option>
+            <option>Document cleanup (folders/naming)</option>
+            <option>Forms & letters</option>
+            <option>Inbox cleanup & follow-ups</option>
+            <option>Backlog triage</option>
+            <option>Bookkeeping document prep</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label for="message">Brief details</label>
+          <textarea id="message" name="message" rows="7" placeholder="Example: I have a pile of PDFs and receipts with no folder system. I want it organized, named, and easy to find."></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn btnPrimary" type="submit">Submit request</button>
+          <span class="tiny">No calls required. Clear next steps.</span>
+        </div>
+
+        <div class="full tiny">
+          Prefer email? <a class="link" href="mailto:support@destineemontgomery.com?subject=Admin%20%26%20Document%20Cleanup%20Inquiry">support@destineemontgomery.com</a>
+        </div>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section" aria-label="FAQ">
+      <h3>FAQ</h3>
+
+      <details>
+        <summary>Do I have to get on a call?</summary>
+        <div class="ans">No. We can handle everything by message/email unless you request a call.</div>
+      </details>
+
+      <details>
+        <summary>Can I upload documents right away?</summary>
+        <div class="ans">Upload only after we confirm scope so you send the right items the first time.</div>
+      </details>
+
+      <details>
+        <summary>What do you need from me?</summary>
+        <div class="ans">It depends on your situation. After you message me, I’ll tell you exactly what to send.</div>
+      </details>
+    </section>
+
+    <footer>
+      <div>Admin & Document Cleanup • Remote support</div>
+      <div>
+        <a class="link" href="#contact">Contact</a> •
+        <a class="link" href="#upload">Secure upload</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
