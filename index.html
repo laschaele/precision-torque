@@ -13,142 +13,223 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Precision Torque | Bookkeeping Cleanup</title>
-  <meta name="description" content="Bookkeeping document cleanup for small business owners who are behind. One-month cleanups, clear next steps, no judgment. Joshua, TX • Remote." />
+  <meta name="description" content="Bookkeeping document cleanup for small business owners who are behind. One-month cleanup, clear next steps, judgment-free. Joshua, TX • Remote." />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237a1f2f;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%235e1722;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='98' fill='url(%23grad)' /%3E%3Cg transform='translate(100,70)'%3E%3Ccircle cx='0' cy='0' r='22' fill='none' stroke='%23fff' stroke-width='3' /%3E%3Cpath d='M -8,-8 L 8,8 M 8,-8 L -8,8' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' /%3E%3Crect x='-6' y='18' width='12' height='24' fill='%23fff' rx='2' /%3E%3C/g%3E%3Ctext x='100' y='145' font-size='28' font-weight='700' text-anchor='middle' fill='%23fff' font-family='Arial,sans-serif'%3EPRECISION TORQUE%3C/text%3E%3Ctext x='100' y='162' font-size='11' text-anchor='middle' fill='%23ddd' font-family='Arial,sans-serif'%3EBookkeeping Cleanup%3C/text%3E%3C/svg%3E" />
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
 
-  <!-- Landing-only polish: keeps your existing styles, adds a focused “sales” look -->
+  <!-- Pearl shimmer landing overrides (premium, not “template”) -->
   <style>
-    /* Brand scheme adjustment (non-destructive): burgundy + warm gold accent + cleaner CTAs */
     :root{
-      --brand: #7a1f2f;
-      --brand2:#b42353;
-      --gold:  #e2c26b;
-      --ink:   #0b1220;
-      --paper: #fbfbfd;
-      --ring:  rgba(226,194,107,.35);
+      --pearl: #F7F5F1;
+      --pearl2:#FBFAF8;
+      --ink:   #0B1220;
+      --muted: rgba(11,18,32,.70);
+
+      --brand: #7A1F2F;   /* burgundy */
+      --brand2:#B42353;   /* brighter burgundy */
+      --champ: #E7D7B2;   /* champagne */
+      --line:  rgba(11,18,32,.10);
+
+      --shadow: 0 18px 50px rgba(11,18,32,.12);
+      --shadow2: 0 10px 28px rgba(11,18,32,.10);
+      --r: 18px;
+      --r2: 26px;
     }
 
-    /* Make homepage feel like a landing page without “template” vibes */
     body.page-home{
       background:
-        radial-gradient(900px 420px at 14% 0%, rgba(122,31,47,.18), transparent 55%),
-        radial-gradient(900px 420px at 86% 6%, rgba(226,194,107,.20), transparent 58%),
-        radial-gradient(900px 420px at 50% 100%, rgba(180,35,83,.10), transparent 60%),
-        var(--paper);
+        radial-gradient(900px 460px at 15% 0%, rgba(231,215,178,.45), transparent 60%),
+        radial-gradient(900px 460px at 85% 8%, rgba(180,35,83,.14), transparent 60%),
+        radial-gradient(900px 460px at 45% 100%, rgba(108,160,190,.10), transparent 65%),
+        linear-gradient(180deg, var(--pearl), var(--pearl2));
+      color: var(--ink);
     }
 
-    /* Tighten nav + make the CTA feel premium */
-    header nav .nav-cta{
+    /* Shimmer overlay (subtle, elegant) */
+    body.page-home:before{
+      content:"";
+      position: fixed;
+      inset: -40%;
+      background:
+        linear-gradient(120deg,
+          rgba(255,255,255,0) 35%,
+          rgba(255,255,255,.18) 45%,
+          rgba(255,255,255,0) 55%);
+      transform: rotate(6deg);
+      background-size: 140% 140%;
+      opacity: .35;
+      pointer-events: none;
+      animation: shimmer 9s ease-in-out infinite;
+    }
+    @keyframes shimmer{
+      0%   { transform: translateX(-6%) rotate(6deg); opacity: .22; }
+      50%  { transform: translateX(6%) rotate(6deg);  opacity: .36; }
+      100% { transform: translateX(-6%) rotate(6deg); opacity: .22; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      body.page-home:before{ animation:none; }
+    }
+
+    /* Header: make it feel intentional + upscale */
+    header{
+      background: rgba(255,255,255,.60);
+      border-bottom: 1px solid rgba(11,18,32,.08);
+      backdrop-filter: blur(10px);
+    }
+    header .tagline{
+      color: rgba(11,18,32,.72);
+    }
+    header nav a{
+      color: rgba(11,18,32,.78);
+    }
+    header nav a:hover{
+      color: rgba(11,18,32,.92);
+    }
+
+    /* Landing nav: focused */
+    header nav a.nav-cta{
       background: linear-gradient(135deg, var(--brand), var(--brand2));
-      border: 1px solid rgba(122,31,47,.25);
-      box-shadow: 0 14px 28px rgba(122,31,47,.18);
+      border: 1px solid rgba(122,31,47,.22);
+      box-shadow: 0 14px 30px rgba(122,31,47,.18);
+      color: white;
     }
-    header nav .nav-cta:hover{ filter: brightness(1.05); }
 
-    /* HERO: convert from general services to bookkeeping cleanup-only */
+    /* Hero: pearl “glass” card */
     .hero.hero--dark{
-      /* Keep your dark hero, but elevate */
-      position: relative;
-      overflow: hidden;
+      background: transparent !important;
+      padding-top: 26px;
+      padding-bottom: 26px;
     }
-    .hero.hero--dark:before{
+    .hero .wrap.hero-grid{
+      gap: 18px;
+    }
+    .hero .stack-lg, .hero .hero-panel{
+      border-radius: var(--r2);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(11,18,32,.10);
+      overflow: hidden;
+      position: relative;
+      background: rgba(255,255,255,.78);
+      backdrop-filter: blur(10px);
+      color: var(--ink);
+    }
+    .hero .stack-lg{
+      padding: 26px;
+    }
+    .hero .hero-panel{
+      padding: 22px;
+      background: rgba(255,255,255,.72);
+    }
+
+    /* Pearl gradient edge */
+    .hero .stack-lg:before,
+    .hero .hero-panel:before{
       content:"";
       position:absolute;
-      inset:-2px;
-      background:
-        radial-gradient(520px 260px at 14% 10%, rgba(226,194,107,.18), transparent 60%),
-        radial-gradient(520px 260px at 86% 22%, rgba(180,35,83,.18), transparent 62%);
+      inset:0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg,
+        rgba(231,215,178,.85),
+        rgba(180,35,83,.18),
+        rgba(108,160,190,.18),
+        rgba(231,215,178,.65));
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
       pointer-events:none;
+      opacity:.9;
     }
-    .hero .wrap{ position: relative; }
 
-    /* Make primary CTA more “buy now” without being salesy */
+    .hero .kicker{
+      color: rgba(11,18,32,.70) !important;
+    }
+    .hero h1{
+      color: rgba(11,18,32,.96) !important;
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -.4px;
+      margin-top: 8px;
+    }
+    .hero .lede{
+      color: rgba(11,18,32,.76) !important;
+      max-width: 62ch;
+    }
+
+    /* Buttons */
     .btn-row .cta{
       background: linear-gradient(135deg, var(--brand), var(--brand2));
-      border: 1px solid rgba(226,194,107,.28);
-      box-shadow: 0 14px 28px rgba(122,31,47,.18);
+      border: 1px solid rgba(122,31,47,.22);
+      box-shadow: 0 12px 26px rgba(122,31,47,.18);
+      color: #fff !important;
     }
     .btn-row .cta:hover{ filter: brightness(1.05); }
     .btn-row .btn-ghost{
-      border-color: rgba(255,255,255,.22);
+      background: rgba(11,18,32,.04);
+      border: 1px solid rgba(11,18,32,.14);
+      color: rgba(11,18,32,.85) !important;
     }
 
-    /* New “offer cards” grid */
-    .offer-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-top: 18px;
+    /* Badges */
+    .badge-row .badge{
+      background: rgba(231,215,178,.26);
+      border: 1px solid rgba(231,215,178,.55);
+      color: rgba(11,18,32,.85);
     }
-    @media (max-width: 900px){
-      .offer-grid{ grid-template-columns: 1fr; }
+
+    /* Sections: keep your existing layout but make cards feel premium */
+    .section{
+      background: transparent;
     }
-    .offer-card{
-      background: rgba(255,255,255,.92);
+    .section .wrap{
+      position: relative;
+    }
+    .section .section-header .kicker{
+      color: rgba(11,18,32,.70);
+    }
+    .section h2{
+      color: rgba(11,18,32,.95);
+    }
+    .section .section-intro{
+      color: rgba(11,18,32,.70);
+    }
+
+    .service-grid .card,
+    .quote-grid .quote,
+    .steps .step{
+      background: rgba(255,255,255,.86);
       border: 1px solid rgba(11,18,32,.10);
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 12px 28px rgba(11,18,32,.08);
-      color: var(--ink);
+      box-shadow: var(--shadow2);
+      border-radius: var(--r);
     }
-    .offer-card .kicker{
-      color: rgba(11,18,32,.70) !important;
-    }
-    .offer-card h3{
-      margin: 6px 0 8px;
-    }
-    .offer-card .muted{
-      color: rgba(11,18,32,.70) !important;
-    }
-    .mini-list{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: rgba(11,18,32,.84);
-    }
-    .mini-list li{ margin: 8px 0; }
 
-    /* Contact + upload section styling */
-    .landing-actions{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 18px;
-      margin-top: 18px;
+    /* Tighten “selling” focus: hide non-bookkeeping service cards */
+    /* If you still want the other services visible later, delete this block */
+    .service-grid article.card:not(:first-child){
+      display:none;
     }
-    @media (max-width: 900px){
-      .landing-actions{ grid-template-columns: 1fr; }
-    }
-    .action-card{
-      background: rgba(255,255,255,.92);
+
+    /* CTA band: looks like a conversion block */
+    .cta-band{
+      background: rgba(255,255,255,.86);
       border: 1px solid rgba(11,18,32,.10);
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 12px 28px rgba(11,18,32,.08);
+      box-shadow: var(--shadow2);
+      border-radius: var(--r2);
     }
-    .action-card h3{ margin-top: 0; }
-    .action-card .muted{ color: rgba(11,18,32,.70) !important; }
-
-    .upload-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 12px 14px;
-      border-radius: 12px;
-      text-decoration:none;
-      font-weight: 700;
-      background: rgba(226,194,107,.18);
-      border: 1px solid rgba(226,194,107,.45);
-      color: rgba(11,18,32,.92);
+    .cta-band .cta{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
     }
-    .upload-btn:hover{ filter: brightness(1.03); }
 
-    /* Make internal anchor jumps smoother */
-    html{ scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce){
-      html{ scroll-behavior: auto; }
+    /* Footer */
+    footer{
+      background: rgba(255,255,255,.60);
+      border-top: 1px solid rgba(11,18,32,.08);
+      backdrop-filter: blur(10px);
     }
   </style>
 </head>
@@ -162,37 +243,42 @@
       <div class="tagline">Bookkeeping Cleanup • Remote Support</div>
     </div>
 
-    <!-- LANDING NAV: keep minimal + focused (no confusion) -->
+    <!-- Focused nav for landing -->
     <nav aria-label="Main navigation">
       <a href="/index.html" aria-current="page">Home</a>
       <a href="#how">How it works</a>
-      <a href="#contact">Message</a>
-      <a href="#upload">Secure Upload</a>
-      <a href="#contact" class="cta nav-cta">Get Started</a>
+      <a href="#proof">Results</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html" class="cta nav-cta">Get Started</a>
     </nav>
   </header>
 
   <main id="main-content">
 
-    <!-- HERO (Bookkeeping cleanup only) -->
+    <!-- HERO -->
     <section class="hero hero--dark">
       <div class="wrap hero-grid">
         <div class="stack-lg">
           <div class="kicker">Joshua, TX • Remote</div>
 
-          <h1>Behind on bookkeeping? Let’s clean up one month and get you back on track.</h1>
+          <h1>Behind on bookkeeping? I’ll clean up one month and give you clear next steps.</h1>
 
           <p class="lede">
             This is for small business owners who are overwhelmed, behind, or avoiding QuickBooks.
-            I organize one month of transactions/documents at a time, then give you clear next steps—quietly and without judgment.
+            We start small (one month), get it organized, and make the next step obvious.
           </p>
 
           <div class="btn-row">
-            <a class="cta" href="#contact">Message me to start</a>
-            <a class="btn-ghost" href="#how">See how it works</a>
+            <a class="cta" href="/contact.html">Message me to start</a>
+            <a class="btn-ghost"
+               href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1"
+               target="_blank"
+               rel="noopener">
+              Secure upload
+            </a>
           </div>
 
-          <p class="muted" style="color: rgba(255,255,255,.78); font-size:13px; margin-top:10px;">
+          <p class="muted" style="color: rgba(11,18,32,.68); font-size:13px; margin-top:10px;">
             No phone calls required. Quick reply. Clear scope.
           </p>
 
@@ -203,72 +289,91 @@
           </div>
         </div>
 
-        <!-- RIGHT PANEL: Offer clarity -->
-        <div class="hero-panel stack" aria-label="Cleanup offer panel">
-          <div class="kicker">The offer</div>
+        <div class="hero-panel stack" aria-label="Fast start panel">
+          <div class="kicker">What you get</div>
           <h3>Bookkeeping Document Cleanup</h3>
-          <ul class="list-muted" style="color: rgba(255,255,255,.86);">
+          <ul class="list-muted" style="color: rgba(11,18,32,.80);">
             <li>Organize one month of transactions & receipts</li>
             <li>Flag obvious issues that need attention</li>
-            <li>Provide a clean summary + next step plan</li>
+            <li>Clean summary + next-step plan</li>
           </ul>
 
-          <div class="btn-row" style="margin-top:4px;">
-            <a class="cta" href="#contact">Request cleanup</a>
+          <div class="btn-row" style="margin-top:8px;">
+            <a class="cta" href="/contact.html">Request cleanup</a>
           </div>
 
-          <p class="muted" style="color: rgba(255,255,255,.78); font-size:13px;">
-            If it’s outside scope, I’ll tell you clearly.
+          <p class="muted" style="color: rgba(11,18,32,.62); font-size:13px;">
+            Upload only after we confirm what I need.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Offer grid (keeps page “selling” without looking pushy) -->
+    <!-- SERVICES PREVIEW (Bookkeeping only) -->
     <section class="section">
       <div class="wrap">
         <div class="section-header">
-          <div class="kicker">What you get</div>
-          <h2>Contained, calm, and actually helpful.</h2>
+          <div class="kicker">Service</div>
+          <h2>One focused service. One clear outcome.</h2>
           <p class="section-intro">
-            We start with one month so it’s manageable, then you decide what to do next.
+            Bookkeeping cleanup + organization that reduces stress and makes taxes easier.
           </p>
         </div>
 
-        <div class="offer-grid">
-          <div class="offer-card">
-            <div class="kicker">Best for</div>
-            <h3>The “I’ve been avoiding it” situation</h3>
-            <p class="muted">When your books are a mess and you just need order, fast.</p>
-            <ul class="mini-list">
-              <li>Receipts/statements scattered</li>
-              <li>Transactions uncategorized</li>
-              <li>Unsure what matters most</li>
+        <div class="service-grid">
+          <article class="card">
+            <h3>Bookkeeping Cleanup</h3>
+            <p class="muted">One-month cleanup to get you organized and back on track.</p>
+            <ul>
+              <li>QuickBooks cleanup</li>
+              <li>Transaction categorization support</li>
+              <li>Clear summary + next steps</li>
             </ul>
-          </div>
+            <a class="cta" href="/contact.html">Start here</a>
+          </article>
 
-          <div class="offer-card">
-            <div class="kicker">Outcome</div>
-            <h3>Clarity + next steps</h3>
-            <p class="muted">You’ll know what’s done, what’s still missing, and what to do next.</p>
-            <ul class="mini-list">
-              <li>One month organized</li>
-              <li>Issues flagged (not hidden)</li>
-              <li>Simple forward plan</li>
+          <!-- Hidden by CSS to keep the landing focused (see CSS block above) -->
+          <article class="card">
+            <h3>Mobile Notary</h3>
+            <p class="muted">Convenient notarization where you are.</p>
+            <ul>
+              <li>Appointments by request</li>
+              <li>Document checklist help</li>
+              <li>Clear travel fees</li>
             </ul>
+            <a class="cta" href="/notary.html">Learn More</a>
+          </article>
+
+          <article class="card">
+            <h3>Vehicle Registration</h3>
+            <p class="muted">Paperwork support to save you time.</p>
+            <ul>
+              <li>Title transfer prep</li>
+              <li>Registration guidance</li>
+              <li>Document submission help</li>
+            </ul>
+            <a class="cta" href="/vehicle.html">Learn More</a>
+          </article>
+        </div>
+
+        <div class="cta-band" role="region" aria-label="Call to action">
+          <div>
+            <h3>Ready to stop avoiding it?</h3>
+            <p>Send a message and I’ll tell you exactly what to do next.</p>
           </div>
+          <a class="cta" href="/contact.html">Message me</a>
         </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS (anchor-friendly for landing) -->
-    <section id="how" class="section" style="background: var(--surface-muted);">
+    <!-- PROCESS -->
+    <section id="how" class="section" style="background: transparent;">
       <div class="wrap">
         <div class="section-header">
           <div class="kicker">How it works</div>
-          <h2>Three steps. No chaos.</h2>
+          <h2>A clean process that doesn’t overwhelm you.</h2>
           <p class="section-intro">
-            A clean process you can trust, built for overwhelmed people.
+            Simple steps, clear communication, and secure handling.
           </p>
         </div>
 
@@ -280,93 +385,59 @@
           </div>
           <div class="step">
             <div class="num">2</div>
-            <h4>Send documents</h4>
-            <p>Use secure upload once I confirm scope and what I need.</p>
+            <h4>Upload documents</h4>
+            <p>I’ll send/confirm exactly what to upload. Use the secure link.</p>
           </div>
           <div class="step">
             <div class="num">3</div>
             <h4>Cleanup + summary</h4>
             <p>You get an organized month and clear next steps.</p>
           </div>
+          <div class="step">
+            <div class="num">4</div>
+            <h4>Optional monthly support</h4>
+            <p>If you want ongoing help, we can keep things clean moving forward.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF -->
+    <section id="proof" class="section">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="kicker">What this fixes</div>
+          <h2>Less chaos. More clarity.</h2>
         </div>
 
-        <!-- NEW: One-page actions (contact + upload) -->
-        <div class="landing-actions">
-          <div id="contact" class="action-card" aria-label="Message section">
-            <h3>Message me to start</h3>
-            <p class="muted">
-              Use the contact form below. If you prefer email, use
-              <a href="mailto:support@destineemontgomery.com?subject=Bookkeeping%20Cleanup%20Inquiry">support@destineemontgomery.com</a>.
-            </p>
-
-            <!-- Keep your existing contact form (no weird linking) -->
-            <iframe
-              title="Contact form"
-              src="/contact.html"
-              style="width:100%; height:760px; border:0; border-radius:12px; background:#fff;"
-              loading="lazy"></iframe>
-
-            <p class="muted" style="margin-top:10px; font-size:13px;">
-              If the form doesn’t load, open it here: <a href="/contact.html">Contact page</a>
-            </p>
+        <div class="quote-grid">
+          <div class="quote">
+            <p>“I finally stopped avoiding my books. The next step was clear.”</p>
+            <div class="who">Cleanup Client</div>
+            <div class="sub">Remote service</div>
           </div>
-
-          <div id="upload" class="action-card" aria-label="Secure upload section">
-            <h3>Secure document upload</h3>
-            <p class="muted">
-              Only upload documents after I confirm scope. Dropbox opens in a new tab for security.
-            </p>
-
-            <a class="upload-btn"
-               href="https://www.dropbox.com/request/SnOJtwnshuFZPxOhbpt1"
-               target="_blank"
-               rel="noopener">
-              Upload documents securely
-            </a>
-
-            <p class="muted" style="margin-top:12px; font-size:13px;">
-              Recommended: bank statements + receipts for the month(s) we agree on.
-            </p>
-
-            <div style="margin-top:14px;">
-              <div class="kicker">Tip</div>
-              <p class="muted" style="margin:6px 0 0;">
-                If you’re not sure what to upload yet, message first—I'll tell you exactly what I need.
-              </p>
-            </div>
+          <div class="quote">
+            <p>“Everything was organized and explained in plain language.”</p>
+            <div class="who">Small Business Owner</div>
+            <div class="sub">QuickBooks cleanup</div>
+          </div>
+          <div class="quote">
+            <p>“It was calm, fast, and didn’t feel embarrassing.”</p>
+            <div class="who">Cleanup Client</div>
+            <div class="sub">One-month start</div>
           </div>
         </div>
 
+        <div class="cta-band" role="region" aria-label="Final call to action" style="margin-top:18px;">
+          <div>
+            <h3>Want the easiest next step?</h3>
+            <p>Message me what you’re stuck on. I’ll reply with scope + what I need.</p>
+          </div>
+          <a class="cta" href="/contact.html">Contact</a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>Precision Torque</h4>
-        <p>Bookkeeping cleanup and remote document organization for overwhelmed small business owners.</p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Contact</h4>
-        <p>👤 Destinee Montgomery</p>
-        <p>📱 <a href="tel:+16825297128">(682) 529-7128</a></p>
-        <p>✉️ <a href="mailto:support@destineemontgomery.com">support@destineemontgomery.com</a></p>
-        <p>📍 Joshua, TX • Remote support</p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Next Step</h4>
-        <p><a href="#contact">Message me</a></p>
-        <p><a href="#upload">Secure upload</a></p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      &copy; 2026 Precision Torque — All Rights Reserved
-    </div>
-  </footer>
-</body>
-</html>
