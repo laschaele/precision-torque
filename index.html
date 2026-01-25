@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Precision Torque | Bookkeeping Cleanup + Monthly</title>
+  <meta name="description" content="Behind on bookkeeping? Precision Torque helps small business owners organize one month of transactions, get clarity, and move forward—quietly and without judgment. Joshua, TX • Remote." />
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGHP4YD769"></script>
   <script>
@@ -10,248 +15,416 @@
     gtag('config', 'G-BGHP4YD769');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Precision Torque | Bookkeeping • Mobile Notary • Vehicle Registration</title>
-  <meta name="description" content="Precision Torque provides remote bookkeeping, mobile notary, and vehicle registration help in Joshua, TX and surrounding areas." />
+  <style>
+    :root{
+      /* Brand scheme: deep navy + burgundy + gold + mint accent */
+      --bg0:#070A12;
+      --bg1:#0B1220;
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.08);
+      --stroke:rgba(255,255,255,.10);
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237a1f2f;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%235e1722;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='98' fill='url(%23grad)' /%3E%3Cg transform='translate(100,70)'%3E%3Ccircle cx='0' cy='0' r='22' fill='none' stroke='%23fff' stroke-width='3' /%3E%3Cpath d='M -8,-8 L 8,8 M 8,-8 L -8,8' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' /%3E%3Crect x='-6' y='18' width='12' height='24' fill='%23fff' rx='2' /%3E%3C/g%3E%3Ctext x='100' y='145' font-size='28' font-weight='700' text-anchor='middle' fill='%23fff' font-family='Arial,sans-serif'%3EPRECISION TORQUE%3C/text%3E%3Ctext x='100' y='162' font-size='11' text-anchor='middle' fill='%23ddd' font-family='Arial,sans-serif'%3EProfessional Services%3C/text%3E%3C/svg%3E" />
+      --text:#F8FAFC;
+      --muted:#B6C2D0;
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles.css">
+      --brand:#7C1E3A;      /* burgundy */
+      --brand2:#C02657;     /* brighter burgundy */
+      --gold:#E7C97A;       /* warm gold */
+      --mint:#34D399;       /* calm green */
+
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 26px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(1200px 600px at 12% 10%, rgba(124,30,58,.45), transparent 55%),
+        radial-gradient(900px 520px at 88% 18%, rgba(52,211,153,.20), transparent 60%),
+        radial-gradient(900px 520px at 55% 100%, rgba(231,201,122,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+    }
+
+    a{ color:inherit; }
+    .container{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 42px 20px 80px;
+    }
+
+    /* top bar */
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding: 10px 0 26px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+    }
+    .logo{
+      width:44px;height:44px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(124,30,58,1), rgba(231,201,122,.85));
+      box-shadow: 0 10px 30px rgba(124,30,58,.35);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .brandtext{
+      display:flex; flex-direction:column; line-height:1.1;
+    }
+    .brandtext strong{ letter-spacing:.2px; font-size:15px; }
+    .brandtext span{ color: var(--muted); font-size:12.5px; }
+
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .pill{
+      font-size:13px;
+      padding:10px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      text-decoration:none;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      white-space:nowrap;
+    }
+    .pill:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.16); }
+
+    /* hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+    }
+
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+      overflow:hidden;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(500px 240px at 10% 10%, rgba(231,201,122,.18), transparent 60%),
+        radial-gradient(520px 260px at 88% 30%, rgba(124,30,58,.22), transparent 62%);
+      pointer-events:none;
+    }
+    .hero-inner{ position:relative; }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size: 12.5px;
+      color: rgba(248,250,252,.85);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:8px;height:8px;border-radius:50%;
+      background: var(--mint);
+      box-shadow: 0 0 0 4px rgba(52,211,153,.12);
+    }
+
+    h1{
+      font-size: 2.3rem;
+      line-height: 1.15;
+      margin: 8px 0 14px;
+      letter-spacing: -.4px;
+    }
+    .lede{
+      font-size: 1.06rem;
+      color: rgba(229,231,235,.95);
+      margin: 0 0 18px;
+      max-width: 62ch;
+    }
+
+    .btn-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top: 18px;
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-weight: 650;
+      letter-spacing:.1px;
+      border: 1px solid rgba(255,255,255,.12);
+      transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+      cursor:pointer;
+      user-select:none;
+    }
+    .cta-primary{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 12px 28px rgba(124,30,58,.35);
+    }
+    .cta-primary:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+    .cta-secondary{
+      background: rgba(255,255,255,.06);
+    }
+    .cta-secondary:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+
+    .fineprint{
+      margin-top: 12px;
+      font-size: 13px;
+      color: rgba(248,250,252,.75);
+    }
+
+    /* side card */
+    .side{
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .side h2{
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      letter-spacing:.1px;
+    }
+    .side p{
+      margin: 0 0 14px;
+      color: rgba(229,231,235,.92);
+      font-size: .98rem;
+    }
+    .checklist{
+      margin:0;
+      padding-left: 18px;
+    }
+    .checklist li{ margin: 10px 0; color: rgba(229,231,235,.96); }
+    .tagrow{
+      display:flex; gap:8px; flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    .tag{
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      color: rgba(248,250,252,.85);
+    }
+
+    /* sections */
+    .section{
+      margin-top: 22px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .section h3{
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      letter-spacing:.1px;
+    }
+    .section p{
+      margin: 0 0 10px;
+      color: rgba(229,231,235,.92);
+      font-size: 1rem;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    @media (max-width: 780px){
+      .two-col{ grid-template-columns: 1fr; }
+    }
+
+    .mini{
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .mini strong{ display:block; margin-bottom: 6px; }
+    .mini span{ color: rgba(229,231,235,.92); font-size: .98rem; }
+
+    /* contact + upload embeds */
+    .embed{
+      width: 100%;
+      border: 0;
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      overflow:hidden;
+      min-height: 760px;
+    }
+
+    footer{
+      margin-top: 26px;
+      color: rgba(248,250,252,.70);
+      font-size: 13px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .tinylink{ color: rgba(231,201,122,.95); text-decoration:none; }
+    .tinylink:hover{ text-decoration:underline; }
+
+    /* reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      *{ transition:none !important; scroll-behavior:auto !important; }
+    }
+  </style>
 </head>
 
-<body class="page-home">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+<body>
+  <div class="container">
 
-  <header>
-    <div class="logo">
-      <h2>Precision Torque</h2>
-      <div class="tagline">Trusted Local Bookkeeping &amp; Notary</div>
+    <!-- Top bar -->
+    <div class="topbar">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brandtext">
+          <strong>Precision Torque</strong>
+          <span>Joshua, TX • Remote bookkeeping</span>
+        </div>
+      </a>
+
+      <!-- Keep your existing pages without leading with them -->
+      <nav class="nav" aria-label="Quick links">
+        <a class="pill" href="/services.html">Services</a>
+        <a class="pill" href="#contact">Message</a>
+        <a class="pill" href="#upload">Upload</a>
+      </nav>
     </div>
 
-    <nav aria-label="Main navigation">
-      <a href="/index.html" aria-current="page">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/services.html">Services</a>
-      <a href="/blog/index.html">Resources</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/book.html" class="cta nav-cta">Book Now</a>
-    </nav>
-  </header>
-
-  <main id="main-content">
-
     <!-- HERO -->
-    <section class="hero hero--dark">
-      <div class="wrap hero-grid">
-        <div class="stack-lg">
-          <div class="kicker">Joshua, TX • Remote &amp; Mobile</div>
+    <section class="hero" aria-label="Landing page hero">
+      <div class="hero-card">
+        <div class="hero-inner">
+          <div class="kicker"><span class="dot" aria-hidden="true"></span>Quiet, judgment-free cleanup</div>
 
-          <!-- UPDATED HERO COPY -->
-          <h1>Overwhelmed with paperwork or admin?</h1>
+          <h1>Behind on bookkeeping or paperwork?</h1>
+
           <p class="lede">
-            If you’re behind, stressed, or unsure what to do next, I help you get it handled —
-            forms, letters, bookkeeping cleanup, notary work, and vehicle paperwork —
-            without judgment and without chaos.
+            I help small business owners get <strong>one month</strong> organized so they can breathe again.
+            Clean processes. Clear next steps. No calls required.
           </p>
 
           <div class="btn-row">
-            <!-- UPDATED PRIMARY CTA -->
-            <a class="cta" href="/contact.html">Message me what you need</a>
-            <a class="btn-ghost" href="/services.html">View Services</a>
+            <a class="cta cta-primary" href="#contact">Message me to get started</a>
+            <a class="cta cta-secondary" href="#upload">Secure document upload</a>
           </div>
 
-          <!-- OPTIONAL (but high-converting) reassurance line -->
-          <p class="muted" style="color: rgba(255,255,255,.78); font-size:13px; margin-top:10px;">
-            No calls required. Quick reply. Clear next steps.
-          </p>
-
-          <div class="badge-row" aria-label="Trust badges">
-            <div class="badge">QuickBooks Bookkeeping</div>
-            <div class="badge">E&amp;O Insured (Notary)</div>
-            <div class="badge">Local • Reliable • Confidential</div>
+          <div class="fineprint">
+            Flat-rate cleanup available • Quick reply • Remote clients welcome
           </div>
         </div>
+      </div>
 
-        <div class="hero-panel stack" aria-label="Fast start panel">
-          <div class="kicker">Fast start</div>
-          <h3>What can we handle for you?</h3>
-          <ul class="list-muted" style="color: rgba(255,255,255,.86);">
-            <li>Monthly bookkeeping + reporting</li>
-            <li>Catch-up / cleanup work</li>
-            <li>Mobile notary scheduling</li>
-            <li>Vehicle paperwork support</li>
-          </ul>
+      <!-- SIDE CARD -->
+      <aside class="side" aria-label="What you get">
+        <h2>What you get (simple + contained)</h2>
+        <p>Not a lecture. Not a long project. Just order and clarity.</p>
+        <ul class="checklist">
+          <li>One month of transactions or paperwork organized</li>
+          <li>Obvious issues flagged (so you know what matters)</li>
+          <li>A clear summary of what’s done + what’s next</li>
+        </ul>
 
-          <div class="btn-row" style="margin-top:4px;">
-            <a class="cta" href="/contact.html">Message Me</a>
-          </div>
+        <div class="tagrow" aria-label="Trust badges">
+          <span class="tag">QuickBooks cleanup</span>
+          <span class="tag">Confidential</span>
+          <span class="tag">Fast turnaround</span>
+        </div>
+      </aside>
+    </section>
 
-          <p class="muted" style="color: rgba(255,255,255,.78); font-size:13px;">
-            Response typically within 1 business day.
-          </p>
+    <!-- WHO IT'S FOR -->
+    <section class="section" aria-label="Who this is for">
+      <h3>Who this is for</h3>
+      <div class="two-col">
+        <div class="mini">
+          <strong>If any of this is you:</strong>
+          <span>
+            You’re behind, overwhelmed, avoiding QuickBooks, or your paperwork is scattered.
+            You want it handled quietly and correctly.
+          </span>
+        </div>
+        <div class="mini">
+          <strong>What I won’t do:</strong>
+          <span>
+            No judgment. No pressure calls. No confusing packages.
+            If something is outside scope, I’ll tell you plainly.
+          </span>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES PREVIEW -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="kicker">Services</div>
-          <h2>Pick what you need — we’ll keep it simple.</h2>
-          <p class="section-intro">
-            Clear steps, secure handling, and straightforward pricing conversations.
-          </p>
-        </div>
+    <!-- CONTACT (keeps your existing contact page) -->
+    <section id="contact" class="section" aria-label="Message me">
+      <h3>Message me</h3>
+      <p>Tell me what you’re stuck on. I’ll reply with clear next steps.</p>
 
-        <div class="service-grid">
-          <article class="card">
-            <h3>Bookkeeping</h3>
-            <p class="muted">Monthly support or catch-up — accurate, clean books.</p>
-            <ul>
-              <li>QuickBooks cleanup</li>
-              <li>Transaction categorization</li>
-              <li>Monthly reports</li>
-            </ul>
-            <a class="cta" href="/bookkeeping.html">Learn More</a>
-          </article>
+      <!-- Keeps your current working form without copying it -->
+      <iframe class="embed" src="/contact.html" title="Contact form" loading="lazy"></iframe>
 
-          <article class="card">
-            <h3>Mobile Notary</h3>
-            <p class="muted">Convenient notarization where you are.</p>
-            <ul>
-              <li>Appointments by request</li>
-              <li>Document checklist help</li>
-              <li>Clear travel fees</li>
-            </ul>
-            <a class="cta" href="/notary.html">Learn More</a>
-          </article>
-
-          <article class="card">
-            <h3>Vehicle Registration</h3>
-            <p class="muted">Paperwork support to save you time.</p>
-            <ul>
-              <li>Title transfer prep</li>
-              <li>Registration guidance</li>
-              <li>Document submission help</li>
-            </ul>
-            <a class="cta" href="/vehicle.html">Learn More</a>
-          </article>
-        </div>
-
-        <div class="cta-band" role="region" aria-label="Call to action">
-          <div>
-            <h3>Want help choosing the right service?</h3>
-            <p>Send a quick message — I’ll point you to the right next step.</p>
-          </div>
-          <a class="cta" href="/book.html">Book a Consultation</a>
-        </div>
-      </div>
+      <p class="muted" style="margin-top:12px;">
+        If the form doesn’t load, open it here: <a class="tinylink" href="/contact.html">Contact page</a>
+      </p>
     </section>
 
-    <!-- PROCESS -->
-    <section class="section" style="background: var(--surface-muted);">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="kicker">How it works</div>
-          <h2>A simple process you can trust.</h2>
-          <p class="section-intro">
-            No chaos — just clear steps and consistent communication.
-          </p>
-        </div>
+    <!-- UPLOAD (keeps your existing secure upload page/link) -->
+    <section id="upload" class="section" aria-label="Secure document upload">
+      <h3>Secure document upload</h3>
+      <p>Only upload documents if I request them. Use the secure uploader below.</p>
 
-        <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <h4>Reach out</h4>
-            <p>Tell me what you need. I’ll confirm scope and next steps.</p>
-          </div>
-          <div class="step">
-            <div class="num">2</div>
-            <h4>Send documents</h4>
-            <p>Secure link or email instructions — whatever is easiest.</p>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <h4>Work begins</h4>
-            <p>I handle the details and keep you updated.</p>
-          </div>
-          <div class="step">
-            <div class="num">4</div>
-            <h4>Get results</h4>
-            <p>Completed deliverables, clean paperwork, and peace of mind.</p>
-          </div>
-        </div>
-      </div>
+      <!-- If your upload is a page like /upload.html, this keeps it -->
+      <iframe class="embed" src="/upload.html" title="Secure document upload" loading="lazy"></iframe>
+
+      <p class="muted" style="margin-top:12px;">
+        If the uploader doesn’t load, open it here: <a class="tinylink" href="/upload.html">Upload page</a>
+      </p>
+
+      <!-- If you use a third-party upload link instead, replace the iframe block above with a button like this:
+      <a class="cta cta-primary" href="PASTE_SECURE_UPLOAD_LINK_HERE" target="_blank" rel="noopener">Upload documents</a>
+      -->
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="kicker">What clients say</div>
-          <h2>Professional, reliable, and easy to work with.</h2>
-        </div>
-
-        <div class="quote-grid">
-          <div class="quote">
-            <p>“Everything was explained clearly, and the process was painless. I finally feel organized.”</p>
-            <div class="who">J.S. — Bookkeeping</div>
-            <div class="sub">Joshua, TX</div>
-          </div>
-          <div class="quote">
-            <p>“On time, professional, and made the notary appointment simple.”</p>
-            <div class="who">A.R. — Mobile Notary</div>
-            <div class="sub">Mobile appointment</div>
-          </div>
-          <div class="quote">
-            <p>“Saved me a DMV trip — worth it just for the time and stress I didn’t have to deal with.”</p>
-            <div class="who">T.K. — Vehicle Registration</div>
-            <div class="sub">Remote paperwork support</div>
-          </div>
-        </div>
+    <footer>
+      <div>Precision Torque • Joshua, TX • Remote services</div>
+      <div>
+        <a class="tinylink" href="/services.html">View services</a>
+        &nbsp;•&nbsp;
+        <a class="tinylink" href="/contact.html">Contact</a>
       </div>
-    </section>
+    </footer>
 
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>Precision Torque</h4>
-        <p>Professional bookkeeping, mobile notary, and vehicle registration services for Joshua, TX and surrounding areas.</p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Services</h4>
-        <p><a href="/bookkeeping.html">Bookkeeping</a></p>
-        <p><a href="/notary.html">Mobile Notary</a></p>
-        <p><a href="/vehicle.html">Vehicle Registration</a></p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <p><a href="/index.html">Home</a></p>
-        <p><a href="/about.html">About</a></p>
-        <p><a href="/services.html">Services</a></p>
-        <p><a href="/blog/index.html">Resources</a></p>
-        <p><a href="/contact.html">Contact</a></p>
-      </div>
-
-      <div class="footer-section">
-        <h4>Contact Info</h4>
-        <p>👤 Destinee Montgomery</p>
-        <p>📱 <a href="tel:+16825297128">(682) 529-7128</a></p>
-        <p>✉️ <a href="mailto:support@destineemontgomery.com">support@destineemontgomery.com</a></p>
-        <p>📍 Joshua, TX &amp; Surrounding Areas</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      &copy; 2025 Precision Torque — All Rights Reserved
-    </div>
-  </footer>
+  </div>
 </body>
 </html>
